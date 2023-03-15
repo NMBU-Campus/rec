@@ -83,7 +83,7 @@
       "displayName": {
         "en": "longName"
       },
-      "name": "long",
+      "name": "longName",
       "schema": "string",
       "writable": true
     }
