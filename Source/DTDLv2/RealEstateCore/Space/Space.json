@@ -71,6 +71,9 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "holds the unique name (or number) from the plan."
+      },
       "displayName": {
         "en": "name"
       },
@@ -80,8 +83,11 @@
     },
     {
       "@type": "Property",
+      "description": {
+        "en": "holds the full name of the space, it is often used in addition to the Name, if a number is assigned to the room, then the descriptive name is exchanged as LongName."
+      },
       "displayName": {
-        "en": "longName"
+        "en": "long name"
       },
       "name": "longName",
       "schema": "string",
