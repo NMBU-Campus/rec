@@ -79,6 +79,16 @@
       "writable": true
     },
     {
+      "@type": "Property",
+      "displayName": {
+        "en": "longName"
+      },
+      "name": "long",
+      "schema": "string",
+      "writable": true
+    }
+    ,
+    {
       "@type": "Relationship",
       "description": {
         "en": "Polygon representing the spatial extent of this Space."
