@@ -330,11 +330,11 @@ components:
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
         longName:
@@ -360,11 +360,11 @@ components:
           type: number
           format: float
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     ArchitectureCapacity:
@@ -385,11 +385,11 @@ components:
           type: integer
           format: int32
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Context:
