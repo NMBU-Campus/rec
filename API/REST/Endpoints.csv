@@ -1,2 +1,4 @@
 Endpoint;DTMI
+sensors;"dtmi:org:brickschema:schema:Brick:Sensor;1"
 buildings;"dtmi:org:w3id:rec:Building;1"
+energiblocks;"dtmi:org:w3id:rec:EnergyBlock;1"
