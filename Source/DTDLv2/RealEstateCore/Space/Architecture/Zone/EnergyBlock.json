@@ -1,0 +1,14 @@
+{
+    "@id": "dtmi:org:w3id:rec:EnergyBlock;1",
+    "@type": "Interface",
+    "description": {
+      "en": "a sub-zone defined by similar energy usage"
+    },
+    "displayName": {
+      "en": "Energy Block"
+    },
+    "extends": "dtmi:org:w3id:rec:Zone;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  }

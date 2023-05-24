@@ -370,8 +370,14 @@ namespace DTDL2OAS
                                 outputPropertySchema.format = format;
                             }
                         }
+                        schema.properties[propertyName] = outputPropertySchema;
                     }
-                    schema.properties[propertyName] = outputPropertySchema;
+                    // Check against complex types
+                    if(property.Schema is DTComplexSchemaInfo)
+                    {
+                        // What if it's not an object...?
+                        schema.properties[propertyName] = new OASDocument.ObjectSchema();
+                    }
                 }
                 OutputDocument.components.schemas.Add(schemaName, schema);
             }

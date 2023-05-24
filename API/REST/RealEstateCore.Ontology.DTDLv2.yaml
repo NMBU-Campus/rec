@@ -498,11 +498,11 @@ components:
           type: string
           format: date
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         initialCost:
           type: string
         installationDate:
@@ -586,11 +586,42 @@ components:
               type: string
               default: dtmi:org:w3id:rec:Space;1
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
+          type: object
+        name:
           type: string
+    Collection:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Collection;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Collection.jsonld
+        documentation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Document;1
+        customProperties:
+          type: object
+        customTags:
+          type: object
+        identifiers:
+          type: object
         name:
           type: string
     Alarm:
@@ -620,7 +651,7 @@ components:
         aggregate:
           type: string
         customProperties:
-          type: string
+          type: object
         customTags:
           type: string
         hasQuantity:
@@ -628,7 +659,7 @@ components:
         hasSubstance:
           type: string
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Command:
@@ -658,7 +689,7 @@ components:
         aggregate:
           type: string
         customProperties:
-          type: string
+          type: object
         customTags:
           type: string
         hasQuantity:
@@ -666,7 +697,7 @@ components:
         hasSubstance:
           type: string
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Status:
@@ -696,7 +727,7 @@ components:
         aggregate:
           type: string
         customProperties:
-          type: string
+          type: object
         customTags:
           type: string
         hasQuantity:
@@ -704,7 +735,7 @@ components:
         hasSubstance:
           type: string
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Parameter:
@@ -770,7 +801,7 @@ components:
         aggregate:
           type: string
         customProperties:
-          type: string
+          type: object
         customTags:
           type: string
         hasQuantity:
@@ -778,7 +809,7 @@ components:
         hasSubstance:
           type: string
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Setpoint:
@@ -806,17 +837,17 @@ components:
         lastKnownValue:
           type: string
         aggregate:
-          type: string
+          type: object
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         hasQuantity:
-          type: string
+          type: object
         hasSubstance:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Document:
@@ -853,11 +884,11 @@ components:
               '@type':
                 type: string
         customProperties:
-          type: string
+          type: object
         customTags:
           type: string
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     ExceptionEvent:
@@ -884,14 +915,14 @@ components:
         value:
           type: string
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         end:
           type: string
           format: date-time
         identifiers:
-          type: string
+          type: object
         name:
           type: string
         start:
@@ -926,14 +957,14 @@ components:
         value:
           type: string
         customProperties:
-          type: string
+          type: object
         customTags:
           type: string
         end:
           type: string
           format: date-time
         identifiers:
-          type: string
+          type: object
         name:
           type: string
         start:
@@ -1142,12 +1173,14 @@ components:
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
+          type: string
+        longName:
           type: string
     SubBuilding:
       type: object
@@ -1378,20 +1411,14 @@ components:
               type: string
               default: dtmi:org:brickschema:schema:Brick:Point;1
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
-        end:
-          type: string
-          format: date-time
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
-        start:
-          type: string
-          format: date-time
-        timestamp:
+        longName:
           type: string
           format: date-time
     Zone:
@@ -1593,12 +1620,15 @@ components:
           $ref: '#/components/schemas/ArchitectureArea'
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
+        levelNumber:
+          type: integer
+          format: int32
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Room:
@@ -1801,11 +1831,11 @@ components:
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Building:
@@ -2008,11 +2038,11 @@ components:
         capacity:
           $ref: '#/components/schemas/ArchitectureCapacity'
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Level:
@@ -2218,12 +2248,14 @@ components:
           type: integer
           format: int32
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
+          type: string
+        longName:
           type: string
     ArchitectureArea:
       type: object
@@ -2246,11 +2278,11 @@ components:
           type: number
           format: float
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     ArchitectureCapacity:
@@ -2271,11 +2303,11 @@ components:
           type: integer
           format: int32
         customProperties:
-          type: string
+          type: object
         customTags:
-          type: string
+          type: object
         identifiers:
-          type: string
+          type: object
         name:
           type: string
     Context:
@@ -4838,6 +4870,12 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
+      - name: longName
+        description: Filter value on property 'longName'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       responses:
         400:
           description: Bad Request
@@ -6875,6 +6913,12 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
+      - name: longName
+        description: Filter value on property 'longName'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       responses:
         400:
           description: Bad Request
@@ -7443,6 +7487,12 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
+      - name: longName
+        description: Filter value on property 'longName'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       responses:
         400:
           description: Bad Request
@@ -7755,6 +7805,12 @@ paths:
         in: query
       - name: name
         description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: longName
+        description: Filter value on property 'longName'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -8075,6 +8131,12 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
+      - name: longName
+        description: Filter value on property 'longName'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       responses:
         400:
           description: Bad Request
@@ -8387,6 +8449,12 @@ paths:
         in: query
       - name: name
         description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: longName
+        description: Filter value on property 'longName'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
@@ -8707,6 +8775,12 @@ paths:
           $ref: '#/components/schemas/StringFilter'
         style: deepObject
         in: query
+      - name: longName
+        description: Filter value on property 'longName'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
       responses:
         400:
           description: Bad Request
@@ -8912,5 +8986,327 @@ paths:
           description: "'Zone' entity was successfully deleted."
       tags:
       - zones
+  /energiblocks:
+    get:
+      summary: Get 'Energy Block' entities.
+      parameters:
+      - $ref: '#/components/parameters/pageParam'
+      - $ref: '#/components/parameters/sizeParam'
+      - $ref: '#/components/parameters/sortParam'
+      - name: address
+        description: Filter value on relationship 'address'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: adjacentElement
+        description: Filter value on relationship 'adjacentElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: architectedBy
+        description: Filter value on relationship 'architectedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: constructedBy
+        description: Filter value on relationship 'constructedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: containsElement
+        description: Filter value on relationship 'containsElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: documentation
+        description: Filter value on relationship 'documentation'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPoint
+        description: Filter value on relationship 'hasPoint'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: intersectingElement
+        description: Filter value on relationship 'intersectingElement'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isFedBy
+        description: Filter value on relationship 'isFedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: operatedBy
+        description: Filter value on relationship 'operatedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: ownedBy
+        description: Filter value on relationship 'ownedBy'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: geometry
+        description: Filter value on relationship 'geometry'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: georeference
+        description: Filter value on relationship 'georeference'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: hasPart
+        description: Filter value on relationship 'hasPart'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isLocationOf
+        description: Filter value on relationship 'isLocationOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: isPartOf
+        description: Filter value on relationship 'isPartOf'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: customProperties
+        description: Filter value on property 'customProperties'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: customTags
+        description: Filter value on property 'customTags'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: identifiers
+        description: Filter value on property 'identifiers'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: name
+        description: Filter value on property 'name'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      - name: longName
+        description: Filter value on property 'longName'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        style: deepObject
+        in: query
+      responses:
+        400:
+          description: Bad Request
+        500:
+          description: Internal Server Error
+        200:
+          description: An array of 'Energy Block' objects.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - $ref: '#/components/schemas/HydraCollectionWrapper'
+                - type: object
+                  properties:
+                    hydra:member:
+                      type: array
+                      items:
+                        allOf:
+                        - type: object
+                          required:
+                          - '@context'
+                          properties:
+                            '@context':
+                              $ref: '#/components/schemas/Context'
+                        - $ref: '#/components/schemas/EnergyBlock'
+      tags:
+      - energiblocks
+    post:
+      summary: Create a new 'Energy Block' object.
+      parameters: []
+      requestBody:
+        description: New 'Energy Block' entity that is to be added.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/EnergyBlock'
+      responses:
+        500:
+          description: Internal Server Error
+        400:
+          description: Bad Request
+        201:
+          description: Entity was successfully created (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/EnergyBlock'
+      tags:
+      - energiblocks
+  /energiblocks/{id}:
+    get:
+      summary: Get a specific 'Energy Block' object.
+      parameters:
+      - name: id
+        description: Id of 'Energy Block' to return.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Energy Block' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: A 'Energy Block' object.
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/EnergyBlock'
+      tags:
+      - energiblocks
+    put:
+      summary: Update an existing 'Energy Block' entity.
+      parameters:
+      - name: id
+        description: Id of 'Energy Block' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: Updated data for 'Energy Block' entity.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/EnergyBlock'
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Energy Block' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/EnergyBlock'
+      tags:
+      - energiblocks
+    patch:
+      summary: Update a single property on a specific 'Energy Block' object.
+      parameters:
+      - name: id
+        description: Id of 'Energy Block' to update.
+        required: true
+        schema:
+          type: string
+        in: path
+      requestBody:
+        description: A single JSON key-value pair (plus @context), indicating the property to update and its new value. Note that the Swagger UI does not properly show the size constraint on this parameter; but the underlying OpenAPI Specification document does.
+        required: true
+        content:
+          application/ld+json:
+            schema:
+              allOf:
+              - type: object
+                required:
+                - '@context'
+                properties:
+                  '@context':
+                    $ref: '#/components/schemas/Context'
+              - $ref: '#/components/schemas/EnergyBlock'
+              - type: object
+                maxProperties: 2
+                minProperties: 2
+      responses:
+        400:
+          description: Bad Request
+        404:
+          description: An object of type 'Energy Block' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: Entity was updated successfully (new representation returned).
+          content:
+            application/ld+json:
+              schema:
+                allOf:
+                - type: object
+                  required:
+                  - '@context'
+                  properties:
+                    '@context':
+                      $ref: '#/components/schemas/Context'
+                - $ref: '#/components/schemas/EnergyBlock'
+      tags:
+      - energiblocks
+    delete:
+      summary: Delete a 'Energy Block' object.
+      parameters:
+      - name: id
+        description: Id of 'Energy Block' to delete.
+        required: true
+        schema:
+          type: string
+        in: path
+      responses:
+        404:
+          description: An object of type 'Energy Block' with the specified ID was not found.
+        500:
+          description: Internal Server Error
+        200:
+          description: "'Energy Block' entity was successfully deleted."
+      tags:
+      - energiblocks
 servers:
 - url: http://localhost:8080/

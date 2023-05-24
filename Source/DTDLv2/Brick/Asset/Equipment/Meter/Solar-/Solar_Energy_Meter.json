@@ -1,0 +1,14 @@
+{
+    "@id": "dtmi:org:brickschema:schema:Brick:Solar_Energy_Meter;1",
+    "@type": "Interface",
+    "description": {
+      "en": "A meter that measures the usage or consumption of solar energy"
+    },
+    "displayName": {
+      "en": "Solar Energy Meter"
+    },
+    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  }

@@ -1,0 +1,14 @@
+{
+    "@id": "dtmi:org:brickschema:schema:Brick:Local_Heating_Meter;1",
+    "@type": "Interface",
+    "description": {
+      "en": "A meter that measures the usage or consumption of local heating services"
+    },
+    "displayName": {
+      "en": "Local Heating Meter"
+    },
+    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  }
