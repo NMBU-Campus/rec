@@ -17,136 +17,11 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-qudt:hasQuantityKind
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain owl:Class ;
-  rdfs:range <qudt:QuantityKind> ;
-.
-<http://qudt.org/vocab/quantitykind/AbsoluteHumidity>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Acceleration>
-  rdf:type rdfs:Resource ;
-  rdfs:label "Acceleration" ;
-.
-<http://qudt.org/vocab/quantitykind/Angle>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/AngularAcceleration>
-  rdf:type rdfs:Resource ;
-  rdfs:label "Angular acceleration" ;
-.
-<http://qudt.org/vocab/quantitykind/AngularVelocity>
-  rdf:type rdfs:Resource ;
-  rdfs:label "Angular velocity" ;
-.
-<http://qudt.org/vocab/quantitykind/Area>
-  rdf:type rdfs:Resource ;
-  rdfs:label "Area" ;
-.
-<http://qudt.org/vocab/quantitykind/Capacitance>
-  rdf:type rdfs:Resource ;
-  rdfs:label "Capacitance" ;
-.
-<http://qudt.org/vocab/quantitykind/DataRate>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Density>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Distance>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/ElectricCharge>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/ElectricCurrent>
-  rdf:type rdfs:Resource ;
-  rdfs:label "Electric current" ;
-.
-<http://qudt.org/vocab/quantitykind/Energy>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Force>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Frequency>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Illuminance>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Inductance>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/InformationEntropy>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Length>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Luminance>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/LuminousFlux>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/LuminousIntensity>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/MagneticFlux>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Mass>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/MassFlowRate>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Power>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Pressure>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/RelativeHumidity>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Resistance>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/SoundPressure>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Temperature>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Thrust>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Time>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Torque>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Velocity>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Voltage>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/Volume>
-  rdf:type rdfs:Resource ;
-.
-<http://qudt.org/vocab/quantitykind/VolumeFlowRate>
-  rdf:type rdfs:Resource ;
-.
-geojson:Polygon
-  rdf:type rdfs:Datatype ;
-  rdfs:comment "A GeoJSON Polygon coordinate listing representing the geometrical representation of the space. Coordinates may be expressed in two or three dimensions. Ex: [[30.0, 10.0, 0.0], [40.0, 40.0, 2.0], [20.0, 40.0, 2.0], [10.0, 20.0, 2.0], [30.0, 10.0, 0.0]]." ;
-  rdfs:label "Polygon" ;
-  owl:onDatatype xsd:string ;
+brick:Equipment
+  rdf:type owl:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:label "Equipment" ;
+  rdfs:subClassOf rec:Asset ;
 .
 <https://w3id.org/rec>
   rdf:type owl:Ontology ;
@@ -155,6 +30,21 @@ geojson:Polygon
   owl:imports <https://brickschema.org/schema/1.3/Brick> ;
   owl:imports <https://w3id.org/rec/brickpatches> ;
   owl:versionInfo "4.0" ;
+.
+rec:AbsoluteHumidityObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
+  rdfs:label "Absolute humidity observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:AccelerationObservation
   rdf:type rdfs:Class ;
@@ -196,6 +86,15 @@ rec:ActuationEvent
       sh:minCount 1 ;
       sh:name "target point" ;
       sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:string ;
+      sh:description "The command message/payload of this actuation event." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
     ] ;
 .
 rec:AdmittingRoom
@@ -629,11 +528,25 @@ rec:Atrium
   rdfs:label "Atrium" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:AudioVisualEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Audio visual equipment." ;
+  rdfs:label "Audio Visual Equipment" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
 rec:Auditorium
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
   rdfs:label "Auditorium" ;
   rdfs:subClassOf rec:Room ;
+.
+rec:BACnetController
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "BACnet controller." ;
+  rdfs:label "BACnet Controller" ;
+  rdfs:subClassOf rec:Controller ;
 .
 rec:BackOffice
   rdf:type rdfs:Class ;
@@ -694,6 +607,21 @@ rec:Bookcase
   rdf:type sh:NodeShape ;
   rdfs:label "Bookcase" ;
   rdfs:subClassOf rec:Furniture ;
+.
+rec:BooleanValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:boolean value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Boolean value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:Building
   rdf:type rdfs:Class ;
@@ -886,6 +814,13 @@ rec:ConferenceTable
   rdfs:label "Conference table" ;
   rdfs:subClassOf rec:Table ;
 .
+rec:Controller
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Controller." ;
+  rdfs:label "Controller" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
 rec:ConversationRoom
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -903,6 +838,13 @@ rec:CopyingRoom
   rdf:type sh:NodeShape ;
   rdfs:label "Copying room" ;
   rdfs:subClassOf rec:Room ;
+.
+rec:DataNetworkEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Data network equipment." ;
+  rdfs:label "Data Network Equipment" ;
+  rdfs:subClassOf rec:ICTEquipment ;
 .
 rec:DataRateObservation
   rdf:type rdfs:Class ;
@@ -939,6 +881,13 @@ rec:DataSizeObservation
       sh:minCount 1 ;
       sh:name "value" ;
     ] ;
+.
+rec:DaylightSensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Daylight sensor." ;
+  rdfs:label "Daylight Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
 .
 rec:DensityObservation
   rdf:type rdfs:Class ;
@@ -1029,6 +978,21 @@ rec:Door
   rdf:type sh:NodeShape ;
   rdfs:label "Door" ;
   rdfs:subClassOf rec:BarrierAsset ;
+.
+rec:DoubleValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:double value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Double value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
 .
 rec:DressingRoom
   rdf:type rdfs:Class ;
@@ -1176,6 +1140,41 @@ rec:ErrorReport
   rdfs:label "Error report" ;
   rdfs:subClassOf rec:ServiceObject ;
 .
+rec:EthernetPort
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Ethernet port." ;
+  rdfs:label "Ethernet Port" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:poeType ;
+      sh:datatype xsd:string ;
+      sh:in (
+          "Type1"
+          "Type2"
+          "Type3"
+          "Type4"
+        ) ;
+      sh:maxCount 1 ;
+      sh:name "PoE Type" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:portSpeed ;
+      sh:datatype xsd:float ;
+      sh:description "The data rate of the port in Mib/s, i.e. mebibit (2^20 bit) per second." ;
+      sh:maxCount 1 ;
+      sh:name "Port Speed" ;
+    ] ;
+.
+rec:EthernetSwitch
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Ethernet switch." ;
+  rdfs:label "Ethernet Switch" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+.
 rec:Event
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1220,6 +1219,15 @@ rec:ExceptionEvent
       sh:minCount 1 ;
       sh:name "source point" ;
       sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:string ;
+      sh:description "The message of this exception event." ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
     ] ;
 .
 rec:ExerciseRoom
@@ -1344,6 +1352,13 @@ rec:Garage
   rdfs:label "Garage" ;
   rdfs:subClassOf rec:Room ;
 .
+rec:Gateway
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Gateway." ;
+  rdfs:label "Gateway" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
 rec:Geometry
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1451,20 +1466,52 @@ rec:Hospital
   rdfs:label "Hospital" ;
   rdfs:subClassOf rec:Building ;
 .
-rec:HumidityObservation
+rec:IAQSensorEquipment
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
-  qudt:hasQuantityKind <http://qudt.org/vocab/quantitykind/AbsoluteHumidity> ;
-  rdfs:label "Humidity (absolute) observation" ;
-  rdfs:subClassOf rec:ObservationEvent ;
+  rdfs:comment "Indoor air quality sensor." ;
+  rdfs:label "Indoor Air Quality Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
+.
+rec:ICTEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Equipment and devices that are part of a building's ICT infrastructure." ;
+  rdfs:label "ICT Equipment" ;
+  rdfs:subClassOf brick:Equipment ;
   sh:property [
       rdf:type sh:PropertyShape ;
-      sh:path rec:value ;
-      sh:datatype xsd:double ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "value" ;
+      sh:path rec:heightRUs ;
+      sh:datatype xsd:integer ;
+      sh:name "Height (RUs)" ;
     ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:numberOfPorts ;
+      sh:datatype xsd:integer ;
+      sh:name "Number of Ports" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:standard ;
+      sh:datatype xsd:string ;
+      sh:description "The standard the equipment or device adheres to, e.g. IEEE 802.11." ;
+      sh:name "Standard" ;
+    ] ;
+.
+rec:ICTHardware
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "ICT hardware." ;
+  rdfs:label "ICT Hardware" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+.
+rec:ITRack
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "IT rack." ;
+  rdfs:label "IT Rack" ;
+  rdfs:subClassOf rec:ICTEquipment ;
 .
 rec:IlluminanceObservation
   rdf:type rdfs:Class ;
@@ -1502,6 +1549,21 @@ rec:Information
   rdfs:label "Information" ;
   rdfs:subClassOf rdfs:Resource ;
 .
+rec:IntegerValueObservation
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Generic xsd:int value observation that is not specific to any particular QUDT quantitykind or unit." ;
+  rdfs:label "Integer value observation" ;
+  rdfs:subClassOf rec:ObservationEvent ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:value ;
+      sh:datatype xsd:integer ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+.
 rec:Kitchenette
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1537,6 +1599,13 @@ rec:LaundryRoom
   rdf:type sh:NodeShape ;
   rdfs:label "Laundry room" ;
   rdfs:subClassOf rec:Room ;
+.
+rec:LeakDetectorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Leak detector." ;
+  rdfs:label "Leak Detector" ;
+  rdfs:subClassOf rec:SensorEquipment ;
 .
 rec:Lease
   rdf:type rdfs:Class ;
@@ -1772,6 +1841,13 @@ rec:MobileDesk
   rdfs:label "Mobile desk" ;
   rdfs:subClassOf rec:Desk ;
 .
+rec:ModbusController
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Modbus controller." ;
+  rdfs:label "Modbus Controller" ;
+  rdfs:subClassOf rec:Controller ;
+.
 rec:Morgue
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1824,6 +1900,20 @@ rec:NeonatalNursingRoom
   rdfs:label "Neonatal nursing room" ;
   rdfs:subClassOf rec:HealthcareRoom ;
 .
+rec:NetworkRouter
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Network router." ;
+  rdfs:label "Network Router" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+.
+rec:NetworkSecurityEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Network security equipment." ;
+  rdfs:label "Network Security Equipment" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+.
 rec:NotificationObject
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -1845,6 +1935,13 @@ rec:ObservationEvent
       sh:name "source point" ;
       sh:nodeKind sh:IRI ;
     ] ;
+.
+rec:OccupancySensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Occupancy sensor." ;
+  rdfs:label "Occupancy Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
 .
 rec:OccupancyZone
   rdf:type rdfs:Class ;
@@ -1951,6 +2048,13 @@ rec:Partition
   rdfs:label "Partition" ;
   rdfs:subClassOf rec:BarrierAsset ;
 .
+rec:PeopleCountSensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "People count sensor." ;
+  rdfs:label "People Count Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
+.
 rec:Person
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2019,15 +2123,6 @@ rec:PointEvent
   rdfs:comment "An event emanating from or targeting a Point; e.g., an individual Observation from a Sensor point, or an Actuation sent to a Command point. In other terms, the Points indicate the capability of some Space or Equipment to emit or accept data, while this class represents those actual data messages. Note that in most non-trivially sized systems, these events are not stored in the knowledge graph itself, but are rather forwarded to some C&C system or time series database." ;
   rdfs:label "Point event" ;
   rdfs:subClassOf rec:Event ;
-  sh:property [
-      rdf:type sh:PropertyShape ;
-      sh:path rec:payload ;
-      sh:datatype xsd:string ;
-      sh:description "The payload message of this point event (e.g., a sensor reading, a command message, an exception message, etc.)" ;
-      sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:name "payload" ;
-    ] ;
 .
 rec:PointOfInterest
   rdf:type rdfs:Class ;
@@ -2311,6 +2406,32 @@ rec:SecurityRoom
   rdf:type sh:NodeShape ;
   rdfs:label "Security room" ;
   rdfs:subClassOf rec:Room ;
+.
+rec:SensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Sensor equipment." ;
+  rdfs:label "Sensor Equipment" ;
+  rdfs:subClassOf rec:ICTEquipment ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:batteryPercentage ;
+      sh:datatype xsd:double ;
+      sh:name "Battery Percentage" ;
+    ] ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:wifiSignalStrength ;
+      sh:datatype xsd:double ;
+      sh:name "Wi-Fi Signal Strength" ;
+    ] ;
+.
+rec:Server
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Server." ;
+  rdfs:label "Server" ;
+  rdfs:subClassOf rec:ICTHardware ;
 .
 rec:ServiceEntrance
   rdf:type rdfs:Class ;
@@ -2623,6 +2744,13 @@ rec:TherapyRoom
   rdfs:label "Therapy room" ;
   rdfs:subClassOf rec:HealthcareRoom ;
 .
+rec:ThermostatEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Thermostat." ;
+  rdfs:label "Thermostat" ;
+  rdfs:subClassOf rec:SensorEquipment ;
+.
 rec:ThrustObservation
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2707,6 +2835,13 @@ rec:VelocityObservation
       sh:name "value" ;
     ] ;
 .
+rec:VibrationSensorEquipment
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Vibration sensor." ;
+  rdfs:label "Vibration Sensor" ;
+  rdfs:subClassOf rec:SensorEquipment ;
+.
 rec:VirtualBuilding
   rdf:type rdfs:Class ;
   rdf:type sh:NodeShape ;
@@ -2787,6 +2922,27 @@ rec:Window
   rdf:type sh:NodeShape ;
   rdfs:label "Window" ;
   rdfs:subClassOf rec:BarrierAsset ;
+.
+rec:WirelessAccessPoint
+  rdf:type rdfs:Class ;
+  rdf:type sh:NodeShape ;
+  rdfs:comment "Wireless access point." ;
+  rdfs:label "Wireless Access Point" ;
+  rdfs:subClassOf rec:DataNetworkEquipment ;
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path rec:generation ;
+      sh:datatype xsd:string ;
+      sh:in (
+          "WiFi4"
+          "WiFi5"
+          "WiFi6"
+          "WiFi6E"
+          "WiFi7"
+        ) ;
+      sh:maxCount 1 ;
+      sh:name "Generation" ;
+    ] ;
 .
 rec:WorkOrder
   rdf:type rdfs:Class ;
