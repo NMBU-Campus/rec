@@ -208,12 +208,6 @@ namespace DTDL2OAS
             public int minProperties;
         }
 
-        public class ObjectSchema: Schema
-        {
-            public readonly string type = "object";
-            public Dictionary<string, string>? additionalProperties;
-        }
-
         public class PrimitiveSchema: Schema
         {
             public string? type;
@@ -247,11 +241,6 @@ namespace DTDL2OAS
             public Schema? items;
             public int maxItems;
             public int minItems;
-        }
-
-        public class MapSchema: Schema
-        {
-
         }
 
         public class Path
