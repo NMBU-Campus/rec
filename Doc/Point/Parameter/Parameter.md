@@ -18,6 +18,7 @@ Parameter points are configuration settings used to guide the operation of equip
 * [PID_Parameter](PID-/PID_Parameter.md)
 * [Temperature_Parameter](Temperature-/Temperature_Parameter.md)
 * [Tolerance_Parameter](Tolerance-/Tolerance_Parameter.md)
+* [GatewayConnectionParameter](GatewayConnection-/GatewayConnectionParameter.md)
 
 ---
 
@@ -45,6 +46,7 @@ Parameter points are configuration settings used to guide the operation of equip
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../Collection/System/System.md).includes
 * [Architecture](../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../Information/Document/Document.md).documentTopic
 * [Document](../../Information/Document/Document.md).url

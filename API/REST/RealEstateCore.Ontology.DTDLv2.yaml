@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  version: "4.0.0.20"
+  version: "4.0.0.24"
   title: RealEstateCore.Ontology.DTDLv2
   license:
     name: BSD-3-Clause
@@ -130,6 +130,34 @@ components:
           type: string
         desc:
           type: string
+    Event:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Event;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Event.jsonld
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        end:
+          type: string
+          format: date-time
+        identifiers:
+          type: string
+        name:
+          type: string
+        start:
+          type: string
+          format: date-time
+        timestamp:
+          type: string
+          format: date-time
     Asset:
       type: object
       properties:
@@ -302,6 +330,37 @@ components:
           format: date
         weight:
           type: string
+    Collection:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Collection;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Collection.jsonld
+        documentation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Document;1
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        identifiers:
+          type: string
+        name:
+          type: string
     Space:
       type: object
       properties:
@@ -374,126 +433,6 @@ components:
           type: string
         name:
           type: string
-    Event:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:Event;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/Event.jsonld
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        end:
-          type: string
-          format: date-time
-        identifiers:
-          type: string
-        name:
-          type: string
-        start:
-          type: string
-          format: date-time
-        timestamp:
-          type: string
-          format: date-time
-    Agent:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:Agent;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/Agent.jsonld
-        isMemberOf:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Organization;1
-        owns:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        identifiers:
-          type: string
-        name:
-          type: string
-    Collection:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:Collection;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/Collection.jsonld
-        documentation:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Document;1
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        identifiers:
-          type: string
-        name:
-          type: string
-    Information:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:Information;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/Information.jsonld
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        identifiers:
-          type: string
-        name:
-          type: string
     BuildingElement:
       type: object
       properties:
@@ -557,6 +496,79 @@ components:
           type: string
         name:
           type: string
+    Information:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Information;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Information.jsonld
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        identifiers:
+          type: string
+        name:
+          type: string
+    Agent:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Agent;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Agent.jsonld
+        isMemberOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Organization;1
+        owns:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        memberOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Organization;1
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        identifiers:
+          type: string
+        name:
+          type: string
     Point:
       type: object
       properties:
@@ -588,6 +600,295 @@ components:
         hasQuantity:
           type: string
         hasSubstance:
+          type: string
+        identifiers:
+          type: string
+        name:
+          type: string
+    ActuationEvent:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:ActuationEvent;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/ActuationEvent.jsonld
+        targetPoint:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:brickschema:schema:Brick:Point;1
+        value:
+          type: string
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        end:
+          type: string
+          format: date-time
+        identifiers:
+          type: string
+        name:
+          type: string
+        start:
+          type: string
+          format: date-time
+        timestamp:
+          type: string
+          format: date-time
+    ExceptionEvent:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:ExceptionEvent;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/ExceptionEvent.jsonld
+        sourcePoint:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:brickschema:schema:Brick:Point;1
+        value:
+          type: string
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        end:
+          type: string
+          format: date-time
+        identifiers:
+          type: string
+        name:
+          type: string
+        start:
+          type: string
+          format: date-time
+        timestamp:
+          type: string
+          format: date-time
+    SubBuilding:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:SubBuilding;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/SubBuilding.jsonld
+        address:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:PostalAddress;1
+        adjacentElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        architectedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        constructedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        containsElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        documentation:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Document;1
+        hasPoint:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:brickschema:schema:Brick:Point;1
+        intersectingElement:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:BuildingElement;1
+        isFedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        operatedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        ownedBy:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Agent;1
+        geometry:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Geometry;1
+        georeference:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Georeference;1
+        hasPart:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+                default: dtmi:org:w3id:rec:Space;1
+        isLocationOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        isPartOf:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:w3id:rec:Space;1
+        area:
+          $ref: '#/components/schemas/ArchitectureArea'
+        capacity:
+          $ref: '#/components/schemas/ArchitectureCapacity'
+        customProperties:
+          type: string
+        customTags:
           type: string
         identifiers:
           type: string
@@ -800,295 +1101,6 @@ components:
           type: string
         name:
           type: string
-    SubBuilding:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:SubBuilding;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/SubBuilding.jsonld
-        address:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:PostalAddress;1
-        adjacentElement:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:BuildingElement;1
-        architectedBy:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Agent;1
-        constructedBy:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Agent;1
-        containsElement:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:BuildingElement;1
-        documentation:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Document;1
-        hasPoint:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:brickschema:schema:Brick:Point;1
-        intersectingElement:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:BuildingElement;1
-        isFedBy:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-        operatedBy:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Agent;1
-        ownedBy:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Agent;1
-        geometry:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: dtmi:org:w3id:rec:Geometry;1
-        georeference:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: dtmi:org:w3id:rec:Georeference;1
-        hasPart:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:w3id:rec:Space;1
-        isLocationOf:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-        isPartOf:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: dtmi:org:w3id:rec:Space;1
-        area:
-          $ref: '#/components/schemas/ArchitectureArea'
-        capacity:
-          $ref: '#/components/schemas/ArchitectureCapacity'
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        identifiers:
-          type: string
-        name:
-          type: string
-    ActuationEvent:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:ActuationEvent;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/ActuationEvent.jsonld
-        targetPoint:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-                default: dtmi:org:brickschema:schema:Brick:Point;1
-        value:
-          type: string
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        end:
-          type: string
-          format: date-time
-        identifiers:
-          type: string
-        name:
-          type: string
-        start:
-          type: string
-          format: date-time
-        timestamp:
-          type: string
-          format: date-time
-    ExceptionEvent:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:ExceptionEvent;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/ExceptionEvent.jsonld
-        sourcePoint:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: dtmi:org:brickschema:schema:Brick:Point;1
-        value:
-          type: string
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        end:
-          type: string
-          format: date-time
-        identifiers:
-          type: string
-        name:
-          type: string
-        start:
-          type: string
-          format: date-time
-        timestamp:
-          type: string
-          format: date-time
     Document:
       type: object
       properties:
@@ -1130,17 +1142,17 @@ components:
           type: string
         name:
           type: string
-    Parameter:
+    Alarm:
       type: object
       properties:
         '@id':
           type: string
         '@type':
           type: string
-          default: dtmi:org:brickschema:schema:Brick:Parameter;1
+          default: dtmi:org:brickschema:schema:Brick:Alarm;1
         '@context':
           type: string
-          default: https://dev.realestatecore.io/contexts/Parameter.jsonld
+          default: https://dev.realestatecore.io/contexts/Alarm.jsonld
         isPointOf:
           type: array
           items:
@@ -1153,7 +1165,7 @@ components:
               '@type':
                 type: string
         lastKnownValue:
-          type: string
+          $ref: '#/components/schemas/ExceptionEvent'
         aggregate:
           type: string
         customProperties:
@@ -1206,17 +1218,17 @@ components:
           type: string
         name:
           type: string
-    Setpoint:
+    Parameter:
       type: object
       properties:
         '@id':
           type: string
         '@type':
           type: string
-          default: dtmi:org:brickschema:schema:Brick:Setpoint;1
+          default: dtmi:org:brickschema:schema:Brick:Parameter;1
         '@context':
           type: string
-          default: https://dev.realestatecore.io/contexts/Setpoint.jsonld
+          default: https://dev.realestatecore.io/contexts/Parameter.jsonld
         isPointOf:
           type: array
           items:
@@ -1230,80 +1242,6 @@ components:
                 type: string
         lastKnownValue:
           type: string
-        aggregate:
-          type: string
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        hasQuantity:
-          type: string
-        hasSubstance:
-          type: string
-        identifiers:
-          type: string
-        name:
-          type: string
-    Alarm:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:brickschema:schema:Brick:Alarm;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/Alarm.jsonld
-        isPointOf:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
-        lastKnownValue:
-          $ref: '#/components/schemas/ExceptionEvent'
-        aggregate:
-          type: string
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        hasQuantity:
-          type: string
-        hasSubstance:
-          type: string
-        identifiers:
-          type: string
-        name:
-          type: string
-    Sensor:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:brickschema:schema:Brick:Sensor;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/Sensor.jsonld
-        isPointOf:
-          type: array
-          items:
-            type: object
-            required:
-            - '@id'
-            properties:
-              '@id':
-                type: string
-              '@type':
-                type: string
         aggregate:
           type: string
         customProperties:
@@ -1356,17 +1294,129 @@ components:
           type: string
         name:
           type: string
-    Zone:
+    Setpoint:
       type: object
       properties:
         '@id':
           type: string
         '@type':
           type: string
-          default: dtmi:org:w3id:rec:Zone;1
+          default: dtmi:org:brickschema:schema:Brick:Setpoint;1
         '@context':
           type: string
-          default: https://dev.realestatecore.io/contexts/Zone.jsonld
+          default: https://dev.realestatecore.io/contexts/Setpoint.jsonld
+        isPointOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        lastKnownValue:
+          type: string
+        aggregate:
+          type: string
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        hasQuantity:
+          type: string
+        hasSubstance:
+          type: string
+        identifiers:
+          type: string
+        name:
+          type: string
+    Sensor:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:brickschema:schema:Brick:Sensor;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Sensor.jsonld
+        isPointOf:
+          type: array
+          items:
+            type: object
+            required:
+            - '@id'
+            properties:
+              '@id':
+                type: string
+              '@type':
+                type: string
+        aggregate:
+          type: string
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        hasQuantity:
+          type: string
+        hasSubstance:
+          type: string
+        identifiers:
+          type: string
+        name:
+          type: string
+    ObservationEvent:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:ObservationEvent;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/ObservationEvent.jsonld
+        sourcePoint:
+          type: object
+          required:
+          - '@id'
+          properties:
+            '@id':
+              type: string
+            '@type':
+              type: string
+              default: dtmi:org:brickschema:schema:Brick:Point;1
+        customProperties:
+          type: string
+        customTags:
+          type: string
+        end:
+          type: string
+          format: date-time
+        identifiers:
+          type: string
+        name:
+          type: string
+        start:
+          type: string
+          format: date-time
+        timestamp:
+          type: string
+          format: date-time
+    Room:
+      type: object
+      properties:
+        '@id':
+          type: string
+        '@type':
+          type: string
+          default: dtmi:org:w3id:rec:Room;1
+        '@context':
+          type: string
+          default: https://dev.realestatecore.io/contexts/Room.jsonld
         address:
           type: array
           items:
@@ -1980,17 +2030,17 @@ components:
           type: string
         name:
           type: string
-    Room:
+    Zone:
       type: object
       properties:
         '@id':
           type: string
         '@type':
           type: string
-          default: dtmi:org:w3id:rec:Room;1
+          default: dtmi:org:w3id:rec:Zone;1
         '@context':
           type: string
-          default: https://dev.realestatecore.io/contexts/Room.jsonld
+          default: https://dev.realestatecore.io/contexts/Zone.jsonld
         address:
           type: array
           items:
@@ -2187,44 +2237,6 @@ components:
           type: string
         name:
           type: string
-    ObservationEvent:
-      type: object
-      properties:
-        '@id':
-          type: string
-        '@type':
-          type: string
-          default: dtmi:org:w3id:rec:ObservationEvent;1
-        '@context':
-          type: string
-          default: https://dev.realestatecore.io/contexts/ObservationEvent.jsonld
-        sourcePoint:
-          type: object
-          required:
-          - '@id'
-          properties:
-            '@id':
-              type: string
-            '@type':
-              type: string
-              default: dtmi:org:brickschema:schema:Brick:Point;1
-        customProperties:
-          type: string
-        customTags:
-          type: string
-        end:
-          type: string
-          format: date-time
-        identifiers:
-          type: string
-        name:
-          type: string
-        start:
-          type: string
-          format: date-time
-        timestamp:
-          type: string
-          format: date-time
     ArchitectureArea:
       type: object
       properties:
@@ -4138,6 +4150,11 @@ paths:
         in: query
       - name: owns
         description: Filter value on relationship 'owns'.
+        schema:
+          $ref: '#/components/schemas/StringFilter'
+        in: query
+      - name: memberOf
+        description: Filter value on relationship 'memberOf'.
         schema:
           $ref: '#/components/schemas/StringFilter'
         in: query

@@ -832,10 +832,11 @@
       {
         "@type": "Relationship",
         "description": {
-          "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."
+          "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property. (DEPRECATED: Use memberOf going forward)"
         },
+        "comment": "DEPRECATED: Use memberOf going forward",
         "displayName": {
-          "en": "is member of"
+          "en": "is member of (DEPRECATED)"
         },
         "name": "isMemberOf",
         "target": "dtmi:org:w3id:rec:Organization;1",
@@ -850,6 +851,18 @@
           "en": "owns"
         },
         "name": "owns",
+        "writable": true
+      },
+      {
+        "@type": "Relationship",
+        "description": {
+          "en": "Indicates membership in an organization. Note that componency (e.g., departments of a corporation) are expressed using the more generic Organization.isPartOf property."
+        },
+        "displayName": {
+          "en": "member of"
+        },
+        "name": "memberOf",
+        "target": "dtmi:org:w3id:rec:Organization;1",
         "writable": true
       }
     ],
@@ -2356,7 +2369,6 @@
           "en": "includes"
         },
         "name": "includes",
-        "target": "dtmi:org:brickschema:schema:Brick:Equipment;1",
         "writable": true
       }
     ],
@@ -8505,6 +8517,15 @@
       "en": "Footrest"
     },
     "extends": "dtmi:org:w3id:rec:Furniture;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:GatewayConnectionParameter;1",
+    "@type": "Interface",
+    "displayName": "Gateway Connection Parameter",
+    "extends": "dtmi:org:brickschema:schema:Brick:Parameter;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -18830,6 +18851,41 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:IoTHubConnectionParameter;1",
+    "@type": "Interface",
+    "displayName": "IoT Hub Connection Parameter",
+    "extends": "dtmi:org:w3id:rec:GatewayConnectionParameter;1",
+    "contents": [
+      {
+        "@type": "Property",
+        "schema": "string",
+        "description": {
+          "en": "The Device ID of the device connected to Azure IoT Hub"
+        },
+        "displayName": {
+          "en": "Device ID"
+        },
+        "name": "deviceId",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "schema": "string",
+        "description": {
+          "en": "The Hostname of the Azure IoT Hub the gateway is connected to"
+        },
+        "displayName": {
+          "en": "Hostname"
+        },
+        "name": "hostname",
+        "writable": true
+      }
+    ],
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:ITRack;1",
     "@type": "Interface",
     "description": {
@@ -18925,10 +18981,32 @@
     ]
   },
   {
+    "@id": "dtmi:org:w3id:rec:Lobby;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Lobby"
+    },
+    "extends": "dtmi:org:w3id:rec:Room;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:LockerRoom;1",
     "@type": "Interface",
     "displayName": {
       "en": "Locker room"
+    },
+    "extends": "dtmi:org:w3id:rec:Room;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:Lounge;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Lounge"
     },
     "extends": "dtmi:org:w3id:rec:Room;1",
     "@context": [
@@ -19582,6 +19660,17 @@
     "@type": "Interface",
     "displayName": {
       "en": "Storage"
+    },
+    "extends": "dtmi:org:w3id:rec:Room;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:TeamRoom;1",
+    "@type": "Interface",
+    "displayName": {
+      "en": "Team room"
     },
     "extends": "dtmi:org:w3id:rec:Room;1",
     "@context": [
@@ -29235,10 +29324,10 @@
     "@id": "dtmi:org:w3id:rec:BACnetController;1",
     "@type": "Interface",
     "description": {
-      "en": "BACnet controller."
+      "en": "BACnet controller. (DEPRECATED: Use Controller instead. Industry has moved to most Controllers supporting multiple protocols.)"
     },
     "displayName": {
-      "en": "BACnet Controller"
+      "en": "BACnet Controller (DEPRECATED)"
     },
     "@context": [
       "dtmi:dtdl:context;2"
@@ -29591,10 +29680,10 @@
     "@id": "dtmi:org:w3id:rec:ModbusController;1",
     "@type": "Interface",
     "description": {
-      "en": "Modbus controller."
+      "en": "Modbus controller. (DEPRECATED: Use Controller instead. Industry has moved to most Controllers supporting multiple protocols.)"
     },
     "displayName": {
-      "en": "Modbus Controller"
+      "en": "Modbus Controller (DEPRECATED)"
     },
     "@context": [
       "dtmi:dtdl:context;2"

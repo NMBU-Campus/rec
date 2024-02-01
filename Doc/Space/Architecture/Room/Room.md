@@ -34,7 +34,9 @@
 * [Library](Library.md)
 * [LivingRoom](Living-.md)
 * [LoadingReceivingRoom](LoadingReceiving-.md)
+* [Lobby](Lobby.md)
 * [LockerRoom](Locker-.md)
+* [Lounge](Lounge.md)
 * [MeditationRoom](Meditation-.md)
 * [MothersRoom](Mothers-.md)
 * [MultiPurposeRoom](MultiPurpose-.md)
@@ -51,6 +53,7 @@
 * [StaffRoom](Staff-.md)
 * [Stairwell](Stairwell.md)
 * [Storage](Storage.md)
+* [TeamRoom](Team-.md)
 * [Theater](Theater.md)
 * [TreatmentRoom](Treatment-/TreatmentRoom.md)
 * [UtilitiesRoom](Utilities-/UtilitiesRoom.md)
@@ -88,6 +91,7 @@
 * [Space](../../Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../Collection/System/System.md).includes
 * [Architecture](../Architecture.md).isFedBy
 * [Document](../../../Information/Document/Document.md).documentTopic
 * [Document](../../../Information/Document/Document.md).url

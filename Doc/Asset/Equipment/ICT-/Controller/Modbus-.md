@@ -1,10 +1,10 @@
 [Index](../../../../index.md) > [Asset](../../../Asset.md) > [Equipment](../../Equipment.md) > [ICTEquipment](../ICTEquipment.md) > [Controller](Controller.md) > [ModbusController](#)
 # ModbusController
 
-Modbus controller.
+Modbus controller. (DEPRECATED: Use Controller instead. Industry has moved to most Controllers supporting multiple protocols.)
 
 
-**Display name:** Modbus Controller<br />
+**Display name:** Modbus Controller (DEPRECATED)<br />
 **DTMI:** dtmi:org:w3id:rec:ModbusController;1
 
 ---
@@ -33,6 +33,7 @@ Modbus controller.
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy
+* [System](../../../../Collection/System/System.md).includes
 * [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
 * [Document](../../../../Information/Document/Document.md).documentTopic
 * [Document](../../../../Information/Document/Document.md).url
@@ -43,7 +44,6 @@ Modbus controller.
 * [Meter](../../Meter/Meter.md).meters
 ### Inherited
 * [Loop](../../../../Collection/Loop/Loop.md).includes
-* [System](../../../../Collection/System/System.md).includes
 * [Asset](../../../Asset.md).hasPart
 * [Asset](../../../Asset.md).isPartOf
 * [EquipmentCollection](../../../../Collection/Equipment-.md).includes
