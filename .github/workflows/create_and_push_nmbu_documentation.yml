@@ -47,16 +47,16 @@ jobs:
     - name: 'Checkout dev site'
       uses: actions/checkout@v3
       with:
-        repository: NMBU-Campus/nmbu-realestatecore.github.io
-        path: nmbu-realestatecore.github.io
+        repository: NMBU-Campus/nmbu-campus.github.io
+        path: nmbu-campus.github.io
         token:  ${{ secrets.CI_PUSH_PAT }}
     - name: 'Delete old docs from dev site'
-      run: rm -rf ./nmbu-realestatecore.github.io/ontology/*
+      run: rm -rf ./nmbu-campus.github.io/ontology/*
     - name: 'Copy new docs to dev site'
-      run: cp -r ./Doc/* ./nmbu-realestatecore.github.io/ontology/
+      run: cp -r ./Doc/* ./nmbu-campus.github.io/ontology/
     - name: 'Commit and push updated docs'
       run: |
-        cd ./nmbu-realestatecore.github.io/ontology/
+        cd ./nmbu-campus.github.io/ontology/
         git config --global user.email "github-actions@github.com"
         git config --global user.name "github-actions[bot]"
         git add . 
