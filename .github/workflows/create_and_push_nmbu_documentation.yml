@@ -5,7 +5,6 @@ on:
   push:
     branches: 
       - "university_dev"
-      - "main"
     paths:
       - "Source/DTDL**"
       - "API/REST/Endpoints.csv"
@@ -44,6 +43,7 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Regenerated docs/APIs for sha ${{ env.COMMIT_SHORT_SHA }}
+        branch: "university_dev"
     - name: 'Checkout dev site'
       uses: actions/checkout@v3
       with:
