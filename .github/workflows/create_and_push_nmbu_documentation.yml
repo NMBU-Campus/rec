@@ -1,0 +1,64 @@
+name: Create and push NMBU documentation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - "university_dev"
+      - "main"
+    paths:
+      - "Source/DTDL**"
+      - "API/REST/Endpoints.csv"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        token:  ${{ secrets.CI_PUSH_PAT }}
+    - name: Set short git commit SHA
+      id: vars
+      run: |
+        calculatedSha=$(git rev-parse --short ${{ github.sha }})
+        echo "COMMIT_SHORT_SHA=$calculatedSha" >> $GITHUB_ENV
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+    - name: Build DTDL2MD
+      run: dotnet build ./Tools/DTDL2MD/
+    - name: Delete old docs
+      run: |
+        mv Doc/index.md ./DocIndexBackup.md
+        rm -rf Doc/*
+        mv DocIndexBackup.md ./Doc/index.md
+    - name: Run DTDL2MD to generate docs
+      run: dotnet run --project ./Tools/DTDL2MD/ -i ./RealEstateCore.DTDLv2.jsonld -o ./Doc/
+    - name: Build DTDL2OAS
+      run: dotnet build ./Tools/DTDL2OAS/
+    - name: Run DTDL2OAS to generate API specification
+      run: dotnet run --project ./Tools/DTDL2OAS --inputPath ./Source/DTDLv2/ --nuspecPath ./Metadata/RealEstateCore.Ontology.DTDLv2.nuspec --endpointsPath ./API/REST/Endpoints.csv --outputPath ./API/REST
+    - name: 'Commit output docs'
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Regenerated docs/APIs for sha ${{ env.COMMIT_SHORT_SHA }}
+    - name: 'Checkout dev site'
+      uses: actions/checkout@v3
+      with:
+        repository: NMBU-Campus/nmbu-realestatecore.github.io
+        path: nmbu-realestatecore.github.io
+        token:  ${{ secrets.CI_PUSH_PAT }}
+    - name: 'Delete old docs from dev site'
+      run: rm -rf ./nmbu-realestatecore.github.io/ontology/*
+    - name: 'Copy new docs to dev site'
+      run: cp -r ./Doc/* ./nmbu-realestatecore.github.io/ontology/
+    - name: 'Commit and push updated docs'
+      run: |
+        cd ./nmbu-realestatecore.github.io/ontology/
+        git config --global user.email "github-actions@github.com"
+        git config --global user.name "github-actions[bot]"
+        git add . 
+        git commit -a -m "Updated docs to SHA ${{ env.COMMIT_SHORT_SHA }}"
+        git push
