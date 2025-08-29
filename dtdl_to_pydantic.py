@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Genererer Pydantic v2-modeller fra DTDL v2 (REC/Brick m.fl.).
+Genererer Pydantic v2-modeller fra DTDL v2 (REC/Brick m.fl.), uten stubs/duplikater.
+
 Bruk:
   python dtdl_to_pydantic.py \
     --input ./Source/DTDLv2 \
@@ -16,7 +17,7 @@ import re
 import sys
 import textwrap
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Tuple, Set
 
 from ruamel.yaml import YAML
 
@@ -125,7 +126,6 @@ def schema_to_type(
             enum_members = s.get("enumValues", [])
             members = []
             for ev in enum_members:
-                # navn → fall tilbake til value/displayName
                 mname = safe_ident(str(ev.get("name") or ev.get("displayName") or ev.get("value") or "Unknown"))
                 raw = ev.get("value")
                 if raw is None:
@@ -238,9 +238,66 @@ def infer_title(m: Dict[str, Any]) -> str:
         name = _id.split(":")[-1].split(";")[0] if _id else "Interface"
     return str(name)
 
+# --------- Topologisk sort (enkeltarv) ---------
+
+def first_extends_class(m: Dict[str, Any]) -> Optional[str]:
+    ext = m.get("extends")
+    if isinstance(ext, str):
+        return dtmi_to_class(ext)
+    if isinstance(ext, list):
+        for e in ext:
+            if isinstance(e, str):
+                return dtmi_to_class(e)
+    return None
+
+def topo_order(models: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Topologisk sorter interfaces slik at baseklassen kommer før subklassen.
+    Bruker KUN første extends (enkeltarv).
+    """
+    # map: class_name -> model
+    name_to_model: Dict[str, Dict[str, Any]] = {}
+    for m in models:
+        mid = m.get("@id")
+        if not mid:
+            continue
+        name_to_model[dtmi_to_class(mid)] = m
+
+    visited: Set[str] = set()
+    temp: Set[str] = set()
+    order: List[str] = []
+
+    def visit(cls_name: str):
+        if cls_name in visited:
+            return
+        if cls_name in temp:
+            # Syklisk arv — uvanlig i DTDL; bryt syklusen
+            print(f"WARN: Cyclic extends detected at {cls_name}; breaking cycle", file=sys.stderr)
+            return
+        temp.add(cls_name)
+        m = name_to_model.get(cls_name)
+        if m:
+            base = first_extends_class(m)
+            if base:
+                visit(base)
+        temp.remove(cls_name)
+        visited.add(cls_name)
+        order.append(cls_name)
+
+    for cls_name in list(name_to_model.keys()):
+        visit(cls_name)
+
+    # returnerer models i riktig rekkefølge
+    return [name_to_model[n] for n in order if n in name_to_model]
+
+# --------- Generator ---------
+
 def generate(out_path: Path, in_path: Path):
     models = load_models(in_path)
     idx = build_index(models)
+
+    # Topologisk ordning (base før derived)
+    models = topo_order(models)
 
     # Samle lokale schemas per interface (@id -> { schema_id -> schema_obj/str })
     interface_schemas: Dict[str, Dict[str, Any]] = {}
@@ -279,19 +336,6 @@ def generate(out_path: Path, in_path: Path):
     classes: List[str] = []
     exports: List[str] = []
 
-    # --- PASS 0: Emit stubs for all classes so bases exist ---
-    all_class_names = []
-    for m in models:
-        mid = m.get("@id")
-        if not mid:
-            continue
-        cls_name = dtmi_to_class(mid)
-        all_class_names.append(cls_name)
-
-    stub_lines = [f"class {n}(DtdlBase):\n    pass\n" for n in all_class_names]
-    classes.extend(stub_lines)
-
-    # --- PASS 1: Emit real class definitions (override stubs) ---
     for m in models:
         mid = m.get("@id")
         if not mid:
@@ -299,19 +343,10 @@ def generate(out_path: Path, in_path: Path):
 
         cls_name = dtmi_to_class(mid)
 
-        # Arv → ENKELTARV: velg KUN første extends, og legg DtdlBase sist
-        extends_raw = m.get("extends")
-        extends_first: Optional[str] = None
-        if isinstance(extends_raw, str):
-            extends_first = dtmi_to_class(extends_raw)
-        elif isinstance(extends_raw, list):
-            for ex in extends_raw:
-                if isinstance(ex, str):
-                    extends_first = dtmi_to_class(ex)
-                    break  # take first only
-
-        if extends_first:
-            bases: List[str] = [extends_first, "DtdlBase"]
+        # ENKELTARV: velg KUN første extends, og legg DtdlBase sist
+        base = first_extends_class(m)
+        if base:
+            bases: List[str] = [base, "DtdlBase"]
         else:
             bases = ["DtdlBase"]
 
@@ -348,7 +383,6 @@ def generate(out_path: Path, in_path: Path):
                     sch, known_enums, known_objects, current_cls=cls_name, current_prop=c['name']
                 )
                 local_helpers += helpers
-                # constraints
                 ge = c.get("minValue")
                 le = c.get("maxValue")
                 unit = c.get("unit")
@@ -445,7 +479,7 @@ def generate(out_path: Path, in_path: Path):
 
     footer = "\n__all__ += [" + ", ".join([f'\"{e}\"' for e in exports]) + "]\n"
 
-    out_path.write_text(header + "\n\n".join(classes) + footer, encoding="utf-8")
+    (out_path).write_text(header + "\n\n".join(classes) + footer, encoding="utf-8")
     print(f"Generated: {out_path}  ({len(exports)} classes)")
 
 def main():
