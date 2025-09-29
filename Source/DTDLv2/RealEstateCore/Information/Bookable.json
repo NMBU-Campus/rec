@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:org:w3id:rec:Bookable;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "Bookable"
+      },
+      "name": "isBookableOf",
+      "target": "dtmi:org:w3id:rec:Room;1",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Description to be added when a Room can be booked. Bookable will include information about the booking source, and keys to find the correct resource within that system."
+  },
+  "displayName": {
+    "en": "Bookable"
+  },
+  "extends": "dtmi:org:w3id:rec:Information;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}
