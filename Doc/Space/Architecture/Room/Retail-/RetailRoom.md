@@ -29,7 +29,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../../Space.md):** customProperties, customTags, identifiers, name
+* **[Space](../../../Space.md):** customProperties, customTags, identifiers, longName, name
 
 ---
 
@@ -52,6 +52,7 @@
 ### Inherited
 * [Apartment](../../../../Collection/Apartment.md).includes
 * [Asset](../../../../Asset/Asset.md).locatedIn
+* [Bookable](../../../../Information/Bookable.md).isBookableOf
 * [BuildingElement](../../../../BuildingElement/BuildingElement.md).locatedIn
 * [Campus](../../../../Collection/Campus.md).includes
 * [Premises](../../../../Collection/Premises.md).includes

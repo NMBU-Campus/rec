@@ -80,7 +80,7 @@
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../Space.md):** customProperties, customTags, identifiers, name
+* **[Space](../../Space.md):** customProperties, customTags, identifiers, longName, name
 
 ---
 
@@ -102,6 +102,7 @@
 * [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [Apartment](../../../Collection/Apartment.md).includes
+* [Bookable](../../../Information/Bookable.md).isBookableOf
 ### Inherited
 * [Asset](../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn

@@ -9,6 +9,7 @@
 ## Child interfaces
 * [ArchitectureArea](ArchitectureArea.md)
 * [ArchitectureCapacity](ArchitectureCapacity.md)
+* [Bookable](Bookable.md)
 * [Document](Document/Document.md)
 * [Geometry](Geometry/Geometry.md)
 * [Georeference](Georeference/Georeference.md)
