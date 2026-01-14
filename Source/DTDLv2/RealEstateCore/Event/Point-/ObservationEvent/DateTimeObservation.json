@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:org:w3id:rec:DateTimeObservation;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "description": {
+        "en": "Observed date time for observation or setpoint."
+      },
+      "displayName": {
+        "en": "Observed date time"
+      },
+      "name": "observedDateTime",
+      "schema": "dateTime",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "DateTime observation"
+  },
+  "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

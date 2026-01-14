@@ -3,6 +3,14 @@
   "@type": "Interface",
   "contents": [
     {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:TemperatureObservation;1"
+    },
+    {
       "@type": "Property",
       "description": {
         "en": "Brick tags associated with this interface."
