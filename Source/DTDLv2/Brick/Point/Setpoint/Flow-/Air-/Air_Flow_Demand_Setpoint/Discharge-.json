@@ -22,14 +22,6 @@
           "schema": "boolean"
         }
       }
-    },
-    {
-      "@type": "Component",
-      "displayName": {
-        "en": "last known value"
-      },
-      "name": "lastKnownValue",
-      "schema": "dtmi:org:w3id:rec:VolumeFlowRateObservation;1"
     }
   ],
   "description": {
@@ -39,8 +31,7 @@
     "en": "Discharge Air Flow Demand Setpoint"
   },
   "extends": [
-    "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Setpoint;1",
-    "dtmi:org:brickschema:schema:Brick:Air_Flow_Demand_Setpoint;1"
+    "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Setpoint;1"
   ],
   "@context": [
     "dtmi:dtdl:context;2"

@@ -22,14 +22,6 @@
           "schema": "boolean"
         }
       }
-    },
-    {
-      "@type": "Component",
-      "displayName": {
-        "en": "last known value"
-      },
-      "name": "lastKnownValue",
-      "schema": "dtmi:org:w3id:rec:VolumeFlowRateObservation;1"
     }
   ],
   "description": {
@@ -39,8 +31,7 @@
     "en": "Exhaust Air Stack Flow Deadband Setpoint"
   },
   "extends": [
-    "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Stack_Flow_Setpoint;1",
-    "dtmi:org:brickschema:schema:Brick:Air_Flow_Deadband_Setpoint;1"
+    "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Stack_Flow_Setpoint;1"
   ],
   "@context": [
     "dtmi:dtdl:context;2"

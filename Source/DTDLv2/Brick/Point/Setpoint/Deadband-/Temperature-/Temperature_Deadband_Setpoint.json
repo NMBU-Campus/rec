@@ -8,7 +8,6 @@
     "en": "Temperature Deadband Setpoint"
   },
   "extends": [
-    "dtmi:org:brickschema:schema:Brick:Temperature_Setpoint;1",
     "dtmi:org:brickschema:schema:Brick:Deadband_Setpoint;1"
   ],
   "@context": [
