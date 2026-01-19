@@ -22,6 +22,14 @@
           "schema": "boolean"
         }
       }
+    },
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:VolumeFlowRateObservation;1"
     }
   ],
   "description": {
