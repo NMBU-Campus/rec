@@ -11,6 +11,7 @@ A sub-zone within or outside of a building defined to support some technology an
 
 ## Child interfaces
 * [AccessControlZone](AccessControl-.md)
+* [EnergyBlock](EnergyBlock.md)
 * [HVACZone](HVAC-.md)
 * [OccupancyZone](Occupancy-.md)
 * [ParkingSpace](ParkingSpace.md)
@@ -36,7 +37,7 @@ A sub-zone within or outside of a building defined to support some technology an
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../Space.md):** customProperties, customTags, identifiers, name
+* **[Space](../../Space.md):** customProperties, customTags, identifiers, longName, name
 
 ---
 

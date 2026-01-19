@@ -11,8 +11,14 @@ A device that measure usage or consumption of some media --- typically a form en
 
 ## Child interfaces
 * [Building_Meter](Building-/Building_Meter.md)
+* [District_Heating_Meter](District_Heating-.md)
 * [Electrical_Meter](Electrical-/Electrical_Meter.md)
+* [Energy_Meter](Energy-.md)
 * [Gas_Meter](Gas-/Gas_Meter.md)
+* [Heat_Meter](Heat-.md)
+* [Local_Heating_Meter](Local_Heating-.md)
+* [Oil_Meter](Oil-.md)
+* [Solar_Energy_Meter](Solar_Energy-.md)
 * [Thermal_Power_Meter](Thermal_Power-.md)
 * [Water_Meter](Water-/Water_Meter.md)
 

@@ -34,7 +34,8 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 |customProperties|**en**: Custom Properties||map (string->map (string->string))|True|
 |customTags|**en**: Custom Tags||map (string->boolean)|True|
 |identifiers|**en**: Identifiers||map (string->string)|True|
-|name|**en**: name||string|True|
+|longName|**en**: long name|**en**: holds the full name of the space, it is often used in addition to the Name, if a number is assigned to the room, then the descriptive name is exchanged as LongName.|string|True|
+|name|**en**: name|**en**: holds the unique name (or number) from the plan.|string|True|
 
 ---
 
