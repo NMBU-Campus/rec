@@ -37,7 +37,6 @@ Measures the portion of power that, averaged over a complete cycle of the AC wav
 ### General
 * [Point](../../../Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
-* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../Asset/Equipment/Equipment.md).isFedBy

@@ -31,7 +31,6 @@ A parameter that places an upper bound on the range of permitted values of a Pos
 ### General
 * [Point](../../../Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
-* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../Asset/Equipment/Equipment.md).isFedBy

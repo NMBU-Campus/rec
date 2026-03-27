@@ -35,7 +35,6 @@ A cooling element made of pipe or tube that removes heat from equipment, machine
 ### General
 * [Point](../../../../../../Point/Point.md).isPointOf
 * [Agent](../../../../../../Agent/Agent.md).owns
-* [List](../../../../../../List.md).includes
 * [Space](../../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Equipment.md).feeds
 * [Equipment](../../../../Equipment.md).isFedBy

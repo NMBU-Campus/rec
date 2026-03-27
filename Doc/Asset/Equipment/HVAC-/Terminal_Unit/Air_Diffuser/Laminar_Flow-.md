@@ -32,7 +32,6 @@ An air diffuser that is designed for low discharge air speeds to provide uniform
 ### General
 * [Point](../../../../../Point/Point.md).isPointOf
 * [Agent](../../../../../Agent/Agent.md).owns
-* [List](../../../../../List.md).includes
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Equipment.md).feeds
 * [Equipment](../../../Equipment.md).isFedBy

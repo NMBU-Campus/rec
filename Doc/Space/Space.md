@@ -43,7 +43,6 @@ A contiguous part of the physical world that contains or can contain sub-spaces.
 ### General
 * [Point](../Point/Point.md).isPointOf
 * [Agent](../Agent/Agent.md).owns
-* [List](../List.md).includes
 * [Space](#).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy

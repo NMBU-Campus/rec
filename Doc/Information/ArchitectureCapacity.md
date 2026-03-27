@@ -24,7 +24,6 @@ Describes business-relevant capacity measurements typically associated with arch
 ### General
 * [Point](../Point/Point.md).isPointOf
 * [Agent](../Agent/Agent.md).owns
-* [List](../List.md).includes
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy

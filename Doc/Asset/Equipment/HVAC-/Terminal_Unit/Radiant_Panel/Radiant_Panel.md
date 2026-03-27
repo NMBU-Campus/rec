@@ -39,7 +39,6 @@ A temperature-controlled surface that provides fifty percent (50%) or more of th
 ### General
 * [Point](../../../../../Point/Point.md).isPointOf
 * [Agent](../../../../../Agent/Agent.md).owns
-* [List](../../../../../List.md).includes
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Equipment.md).feeds
 * [Equipment](../../../Equipment.md).isFedBy

@@ -43,7 +43,6 @@ An On/Off Command controls or reports the binary status of a control loop, relay
 ### General
 * [Point](../../Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
-* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy

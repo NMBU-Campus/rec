@@ -31,7 +31,6 @@ Indicates if a hard drive or other storage device is ready to be used, e.g. in t
 ### General
 * [Point](../Point.md).isPointOf
 * [Agent](../../Agent/Agent.md).owns
-* [List](../../List.md).includes
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy

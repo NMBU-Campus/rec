@@ -59,7 +59,6 @@ devices that serve all or part of the building and may include electric power, l
 ### General
 * [Point](../../Point/Point.md).isPointOf
 * [Agent](../../Agent/Agent.md).owns
-* [List](../../List.md).includes
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](#).feeds
 * [Equipment](#).isFedBy

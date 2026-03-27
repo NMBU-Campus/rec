@@ -37,7 +37,6 @@ Measures the difference in temperature between entering and leaving water of wat
 ### General
 * [Point](../../../../Point.md).isPointOf
 * [Agent](../../../../../Agent/Agent.md).owns
-* [List](../../../../../List.md).includes
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).isFedBy

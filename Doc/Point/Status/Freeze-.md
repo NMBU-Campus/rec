@@ -31,7 +31,6 @@ Indicates if a substance contained within a vessel has frozen
 ### General
 * [Point](../Point.md).isPointOf
 * [Agent](../../Agent/Agent.md).owns
-* [List](../../List.md).includes
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
