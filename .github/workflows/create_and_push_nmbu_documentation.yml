@@ -1,4 +1,4 @@
-name: Create and push NMBU documentation
+name: DTDL2MD/DTDL2OAS Create and push NMBU markdown documentation and REST API specification
 
 on:
   workflow_dispatch:
