@@ -1,0 +1,43 @@
+name: DTDLMerger DTDL2MD Merge ontology and generate documentation
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - "university_dev"
+    paths:
+      - "Source/DTDL**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token:  ${{ secrets.CI_PUSH_PAT }}
+    - name: Set short git commit SHA
+      id: vars
+      run: |
+        calculatedSha=$(git rev-parse --short ${{ github.sha }})
+        echo "COMMIT_SHORT_SHA=$calculatedSha" >> $GITHUB_ENV
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: 10.0.x
+    - name: Build DTDLValidator
+      run: dotnet build ./Tools/DTDLValidator/
+    - name: Run DTDLValidator to validate DTDL models
+      run: dotnet run --project ./Tools/DTDLValidator/  --recursive true --directory ./Source/DTDLv2/
+    - name: Build DTDLMerger
+      run: dotnet build ./Tools/DTDLMerger/
+    - name: Run DTDLMerger to generate merged JSON-LD file of ontology
+      run: dotnet run --project ./Tools/DTDLMerger/ ./Source/DTDLv2/ > ./RealEstateCore.DTDLv2.jsonld
+    - name: Build DTDL2MD
+      run: dotnet build ./Tools/DTDL2MD/
+    - name: Run DTDL2MD to generate docs
+      run: dotnet run --project ./Tools/DTDL2MD/ -i ./RealEstateCore.DTDLv2.jsonld -o ./Doc/
+    - name: 'Commit merged output'
+      uses: stefanzweifel/git-auto-commit-action@v7
+      with:
+        commit_message: Merged and regenerated docs for sha ${{ env.COMMIT_SHORT_SHA }}
