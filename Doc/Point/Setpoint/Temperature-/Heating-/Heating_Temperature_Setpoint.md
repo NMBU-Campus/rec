@@ -10,18 +10,24 @@ Sets temperature for heating
 ---
 
 ## Child interfaces
-* [Discharge_Air_Temperature_Heating_Setpoint](../Air-/Discharge-/Discharge_Air_Temperature_Heating_Setpoint/Discharge_Air_Temperature_Heating_Setpoint.md)
+* [Discharge_Air_Temperature_Heating_Setpoint](../Air-/Discharge-/Discharge_Air_Temperature_Heating_Setpoint.md)
 * [Effective_Air_Temperature_Heating_Setpoint](../Air-/Effective-/Effective_Air_Temperature_Heating_Setpoint.md)
-* [Heating_Supply_Air_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Supply_Air-/Heating-.md)
 * [Occupied_Air_Temperature_Heating_Setpoint](../Air-/Occupied-/Occupied_Air_Temperature_Heating_Setpoint.md)
-* [Occupied_Heating_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Occupied_Heating-.md)
+* [Occupied_Heating_Temperature_Deadband_Setpoint](Occupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Occupied_Heating_Temperature_Setpoint](Occupied-.md)
 * [Open_Heating_Valve_Outside_Air_Temperature_Setpoint](../Air-/Outside-/Open_Heating_Valve-.md)
 * [Supply_Air_Temperature_Heating_Setpoint](../Air-/Supply-/Supply_Air_Temperature_Heating_Setpoint.md)
 * [Unoccupied_Air_Temperature_Heating_Setpoint](../Air-/Unoccupied-/Unoccupied_Air_Temperature_Heating_Setpoint.md)
-* [Unoccupied_Heating_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Unoccupied_Heating-.md)
+* [Unoccupied_Heating_Temperature_Deadband_Setpoint](Unoccupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Unoccupied_Heating_Temperature_Setpoint](Unoccupied-.md)
 * [Zone_Air_Heating_Temperature_Setpoint](../Air-/Zone-/Zone_Air_Heating_Temperature_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Temperature_Setpoint](../Temperature_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -36,7 +42,6 @@ Sets temperature for heating
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

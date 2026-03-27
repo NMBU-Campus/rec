@@ -26,7 +26,6 @@
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

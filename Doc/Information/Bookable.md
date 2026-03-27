@@ -13,7 +13,7 @@ Description to be added when a Room can be booked. Bookable will include informa
 
 |Name|Display name|Description|Multiplicity|Target|Properties|Writable|
 |-|-|-|-|-|-|-|
-|isBookableOf|**en**: Bookable||0-Infinity|[Room](../Space/Architecture/Room/Room.md)||True|
+|isBookableOf|**en**: Bookable||0-1|[Room](../Space/Architecture/Room/Room.md)||True|
 
 ---
 

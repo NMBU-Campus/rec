@@ -15,6 +15,13 @@ Sets the size of a deadband of static pressure
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Pressure_Setpoint](../../Pressure_Setpoint.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ Sets the size of a deadband of static pressure
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---
 

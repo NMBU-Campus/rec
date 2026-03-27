@@ -14,6 +14,13 @@ Sets temperature for the internal material, e.g. concrete slab, of the radiant p
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Setpoint](../../Temperature_Setpoint.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +32,6 @@ Sets temperature for the internal material, e.g. concrete slab, of the radiant p
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---
 

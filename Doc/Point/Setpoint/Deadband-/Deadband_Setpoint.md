@@ -10,10 +10,16 @@ Sets the size of a deadband
 ---
 
 ## Child interfaces
-* [Air_Flow_Deadband_Setpoint](../Flow-/Air-/Air_Flow_Deadband_Setpoint/Air_Flow_Deadband_Setpoint.md)
 * [Humidity_Deadband_Setpoint](Humidity-.md)
-* [Static_Pressure_Deadband_Setpoint](../Pressure-/Static-/Static_Pressure_Deadband_Setpoint/Static_Pressure_Deadband_Setpoint.md)
-* [Temperature_Deadband_Setpoint](../Temperature-/Temperature_Deadband_Setpoint/Temperature_Deadband_Setpoint.md)
+* [Temperature_Deadband_Setpoint](Temperature-.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueObservation](../../../Event/Point-/ObservationEvent/DoubleValueObservation.md)|
 
 ---
 
@@ -28,7 +34,6 @@ Sets the size of a deadband
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 

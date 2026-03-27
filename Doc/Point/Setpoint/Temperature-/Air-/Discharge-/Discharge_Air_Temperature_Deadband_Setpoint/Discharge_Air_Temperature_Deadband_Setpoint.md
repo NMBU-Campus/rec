@@ -11,7 +11,14 @@ Sets the size of a deadband of temperature of discharge air
 
 ## Child interfaces
 * [Cooling_Discharge_Air_Temperature_Deadband_Setpoint](Cooling-.md)
-* [Heating_Discharge_Air_Temperature_Deadband_Setpoint](../Discharge_Air_Temperature_Heating_Setpoint/Heating_Discharge_Air_Temperature_Deadband_Setpoint.md)
+* [Heating_Discharge_Air_Temperature_Deadband_Setpoint](Heating-.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Temperature_Setpoint](../../../Temperature_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -26,7 +33,6 @@ Sets the size of a deadband of temperature of discharge air
 
 ### Inherited Properties
 * **[Point](../../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../../Setpoint.md):** lastKnownValue
 
 ---
 

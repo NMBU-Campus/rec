@@ -24,6 +24,14 @@ Sets humidity
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[RelativeHumidityObservation](../../../Event/Point-/ObservationEvent/RelativeHumidityObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -35,7 +43,6 @@ Sets humidity
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 

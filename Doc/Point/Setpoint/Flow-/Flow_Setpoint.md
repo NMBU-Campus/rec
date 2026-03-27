@@ -15,6 +15,14 @@ Sets flow
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[VolumeFlowRateObservation](../../../Event/Point-/ObservationEvent/VolumeFlowRateObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +34,6 @@ Sets flow
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 

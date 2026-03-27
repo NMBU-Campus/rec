@@ -18,6 +18,13 @@ Temperature setpoint for supply air
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Temperature_Setpoint](../../Temperature_Setpoint.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -29,7 +36,6 @@ Temperature setpoint for supply air
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---
 

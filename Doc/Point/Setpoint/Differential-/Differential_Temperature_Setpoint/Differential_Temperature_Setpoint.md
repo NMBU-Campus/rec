@@ -15,6 +15,13 @@ A type of Setpoints that is related to the difference between two temperature me
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Differential_Setpoint](../Differential_Setpoint.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +33,6 @@ A type of Setpoints that is related to the difference between two temperature me
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

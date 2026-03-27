@@ -12,12 +12,19 @@ Sets static pressure
 ## Child interfaces
 * [Building_Air_Static_Pressure_Setpoint](Building_Air-.md)
 * [Chilled_Water_Static_Pressure_Setpoint](Chilled_Water-.md)
-* [Discharge_Air_Static_Pressure_Setpoint](Discharge_Air-/Discharge_Air_Static_Pressure_Setpoint.md)
+* [Discharge_Air_Static_Pressure_Setpoint](Discharge_Air-.md)
 * [Exhaust_Air_Static_Pressure_Setpoint](Exhaust_Air-.md)
 * [Hot_Water_Static_Pressure_Setpoint](Hot_Water-.md)
 * [Static_Pressure_Deadband_Setpoint](Static_Pressure_Deadband_Setpoint/Static_Pressure_Deadband_Setpoint.md)
 * [Supply_Air_Static_Pressure_Setpoint](Supply_Air-/Supply_Air_Static_Pressure_Setpoint.md)
 * [Underfloor_Air_Plenum_Static_Pressure_Setpoint](Underfloor_Air_Plenum-.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Pressure_Setpoint](../Pressure_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -32,7 +39,6 @@ Sets static pressure
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

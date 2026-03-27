@@ -19,10 +19,17 @@ Sets temperature of air
 * [Outside_Air_Temperature_Setpoint](Outside-/Outside_Air_Temperature_Setpoint.md)
 * [Return_Air_Temperature_Setpoint](Return-/Return_Air_Temperature_Setpoint.md)
 * [Room_Air_Temperature_Setpoint](Room-/Room_Air_Temperature_Setpoint.md)
-* [Supply_Air_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Supply_Air-/Supply_Air_Temperature_Deadband_Setpoint.md)
+* [Supply_Air_Temperature_Deadband_Setpoint](Supply_Air_Temperature_Deadband_Setpoint/Supply_Air_Temperature_Deadband_Setpoint.md)
 * [Supply_Air_Temperature_Setpoint](Supply-/Supply_Air_Temperature_Setpoint.md)
 * [Unoccupied_Air_Temperature_Setpoint](Unoccupied-/Unoccupied_Air_Temperature_Setpoint.md)
 * [Zone_Air_Temperature_Setpoint](Zone-/Zone_Air_Temperature_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Temperature_Setpoint](../Temperature_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -37,7 +44,6 @@ Sets temperature of air
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

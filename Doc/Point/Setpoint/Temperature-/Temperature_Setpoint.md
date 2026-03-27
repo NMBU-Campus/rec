@@ -15,8 +15,15 @@ Sets temperature
 * [Heating_Temperature_Setpoint](Heating-/Heating_Temperature_Setpoint.md)
 * [Radiant_Panel_Temperature_Setpoint](Radiant_Panel-/Radiant_Panel_Temperature_Setpoint.md)
 * [Schedule_Temperature_Setpoint](Schedule-.md)
-* [Temperature_Deadband_Setpoint](Temperature_Deadband_Setpoint/Temperature_Deadband_Setpoint.md)
 * [Water_Temperature_Setpoint](Water-/Water_Temperature_Setpoint.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[TemperatureObservation](../../../Event/Point-/ObservationEvent/TemperatureObservation.md)|
 
 ---
 
@@ -31,7 +38,6 @@ Sets temperature
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 

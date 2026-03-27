@@ -10,12 +10,19 @@ Sets temperature of discharge air
 ---
 
 ## Child interfaces
-* [Discharge_Air_Temperature_Cooling_Setpoint](Discharge_Air_Temperature_Cooling_Setpoint/Discharge_Air_Temperature_Cooling_Setpoint.md)
+* [Discharge_Air_Temperature_Cooling_Setpoint](Discharge_Air_Temperature_Cooling_Setpoint.md)
 * [Discharge_Air_Temperature_Deadband_Setpoint](Discharge_Air_Temperature_Deadband_Setpoint/Discharge_Air_Temperature_Deadband_Setpoint.md)
-* [Discharge_Air_Temperature_Heating_Setpoint](Discharge_Air_Temperature_Heating_Setpoint/Discharge_Air_Temperature_Heating_Setpoint.md)
+* [Discharge_Air_Temperature_Heating_Setpoint](Discharge_Air_Temperature_Heating_Setpoint.md)
 * [Effective_Discharge_Air_Temperature_Setpoint](../Effective-/Effective_Discharge_Air_Temperature_Setpoint.md)
 * [Occupied_Discharge_Air_Temperature_Setpoint](../Occupied-/Occupied_Discharge_Air_Temperature_Setpoint.md)
 * [Unoccupied_Discharge_Air_Temperature_Setpoint](../Unoccupied-/Unoccupied_Discharge_Air_Temperature_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Temperature_Setpoint](../../Temperature_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -30,7 +37,6 @@ Sets temperature of discharge air
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---
 

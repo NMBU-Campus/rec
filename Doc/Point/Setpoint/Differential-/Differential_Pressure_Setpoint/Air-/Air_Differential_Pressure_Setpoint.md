@@ -17,6 +17,13 @@ Sets the target air differential pressure between an upstream and downstream poi
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Differential_Setpoint](../../Differential_Setpoint.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -28,7 +35,6 @@ Sets the target air differential pressure between an upstream and downstream poi
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---
 

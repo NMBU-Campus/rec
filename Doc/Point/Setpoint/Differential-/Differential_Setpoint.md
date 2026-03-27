@@ -19,6 +19,14 @@ A type of Setpoints that is related to the difference between two measurements
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueObservation](../../../Event/Point-/ObservationEvent/DoubleValueObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -30,7 +38,6 @@ A type of Setpoints that is related to the difference between two measurements
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 

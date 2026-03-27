@@ -9,6 +9,14 @@ Sets dew point
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[TemperatureObservation](../../Event/Point-/ObservationEvent/TemperatureObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +31,6 @@ Sets dew point
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](Setpoint.md):** lastKnownValue
 
 ---
 

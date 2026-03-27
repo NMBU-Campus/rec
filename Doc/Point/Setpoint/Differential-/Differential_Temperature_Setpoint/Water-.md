@@ -9,6 +9,13 @@ Sets the target differential temperature between the start and end of a heat tra
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Differential_Setpoint](../Differential_Setpoint.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Sets the target differential temperature between the start and end of a heat tra
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

@@ -11,8 +11,14 @@ Sets differential pressure
 
 ## Child interfaces
 * [Air_Differential_Pressure_Setpoint](Air-/Air_Differential_Pressure_Setpoint.md)
-* [Load_Shed_Differential_Pressure_Setpoint](../../Load-/Load_Shed_Setpoint/Load_Shed_Differential_Pressure_Setpoint/Load_Shed_Differential_Pressure_Setpoint.md)
 * [Water_Differential_Pressure_Setpoint](Water-/Water_Differential_Pressure_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Differential_Setpoint](../Differential_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -27,7 +33,6 @@ Sets differential pressure
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

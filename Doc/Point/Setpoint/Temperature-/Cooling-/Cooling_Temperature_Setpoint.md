@@ -10,17 +10,23 @@ Sets temperature for cooling
 ---
 
 ## Child interfaces
-* [Cooling_Supply_Air_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Supply_Air-/Cooling-.md)
-* [Discharge_Air_Temperature_Cooling_Setpoint](../Air-/Discharge-/Discharge_Air_Temperature_Cooling_Setpoint/Discharge_Air_Temperature_Cooling_Setpoint.md)
+* [Discharge_Air_Temperature_Cooling_Setpoint](../Air-/Discharge-/Discharge_Air_Temperature_Cooling_Setpoint.md)
 * [Effective_Air_Temperature_Cooling_Setpoint](../Air-/Effective-/Effective_Air_Temperature_Cooling_Setpoint.md)
 * [Occupied_Air_Temperature_Cooling_Setpoint](../Air-/Occupied-/Occupied_Air_Temperature_Cooling_Setpoint.md)
-* [Occupied_Cooling_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Occupied_Cooling-.md)
+* [Occupied_Cooling_Temperature_Deadband_Setpoint](Occupied_Cooling_Temperature_Deadband_Setpoint.md)
 * [Occupied_Cooling_Temperature_Setpoint](Occupied-.md)
 * [Supply_Air_Temperature_Cooling_Setpoint](../Air-/Supply-/Supply_Air_Temperature_Cooling_Setpoint.md)
 * [Unoccupied_Air_Temperature_Cooling_Setpoint](../Air-/Unoccupied-/Unoccupied_Air_Temperature_Cooling_Setpoint.md)
-* [Unoccupied_Cooling_Temperature_Deadband_Setpoint](../Temperature_Deadband_Setpoint/Unoccupied_Cooling-.md)
+* [Unoccupied_Cooling_Temperature_Deadband_Setpoint](Unoccupied_Cooling_Temperature_Deadband_Setpoint.md)
 * [Unoccupied_Cooling_Temperature_Setpoint](Unoccupied-.md)
 * [Zone_Air_Cooling_Temperature_Setpoint](../Air-/Zone-/Zone_Air_Cooling_Temperature_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Temperature_Setpoint](../Temperature_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -35,7 +41,6 @@ Sets temperature for cooling
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 

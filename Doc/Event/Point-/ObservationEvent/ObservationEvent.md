@@ -17,6 +17,7 @@
 * [CapacitanceObservation](CapacitanceObservation.md)
 * [DataRateObservation](DataRateObservation.md)
 * [DataSizeObservation](DataSizeObservation.md)
+* [DateTimeObservation](DateTimeObservation.md)
 * [DensityObservation](DensityObservation.md)
 * [DistanceObservation](DistanceObservation.md)
 * [DoubleValueObservation](DoubleValueObservation.md)
