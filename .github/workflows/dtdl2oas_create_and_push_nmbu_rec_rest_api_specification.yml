@@ -38,4 +38,3 @@ jobs:
       uses: stefanzweifel/git-auto-commit-action@v7
       with:
         commit_message: Regenerated docs/APIs for sha ${{ env.COMMIT_SHORT_SHA }}
-        ref: ${{ github.head_ref }}
