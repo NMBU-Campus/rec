@@ -1,4 +1,4 @@
-name: DTDL2MD/DTDL2OAS Create and push NMBU markdown documentation and REST API specification
+name: DTDL2OAS Create and push NMBU REC REST API specification
 
 on:
   workflow_dispatch:
@@ -23,42 +23,19 @@ jobs:
         calculatedSha=$(git rev-parse --short ${{ github.sha }})
         echo "COMMIT_SHORT_SHA=$calculatedSha" >> $GITHUB_ENV
     - name: Setup .NET
-      uses: actions/setup-dotnet@v3
+      uses: actions/setup-dotnet@v5
       with:
-        dotnet-version: 6.0.x
-    - name: Build DTDL2MD
-      run: dotnet build ./Tools/DTDL2MD/
-    - name: Delete old docs
-      run: |
-        mv Doc/index.md ./DocIndexBackup.md
-        rm -rf Doc/*
-        mv DocIndexBackup.md ./Doc/index.md
-    - name: Run DTDL2MD to generate docs
-      run: dotnet run --project ./Tools/DTDL2MD/ -i ./RealEstateCore.DTDLv2.jsonld -o ./Doc/
+        dotnet-version: 10.0.x
+    - name: Build DTDLValidator
+      run: dotnet build ./Tools/DTDLValidator/
+    - name: Run DTDLValidator to validate DTDL models
+      run: dotnet run --project ./Tools/DTDLValidator/  --recursive true --directory ./Source/DTDLv2/
     - name: Build DTDL2OAS
       run: dotnet build ./Tools/DTDL2OAS/
     - name: Run DTDL2OAS to generate API specification
       run: dotnet run --project ./Tools/DTDL2OAS --inputPath ./Source/DTDLv2/ --nuspecPath ./Metadata/RealEstateCore.Ontology.DTDLv2.nuspec --endpointsPath ./API/REST/Endpoints.csv --outputPath ./API/REST
     - name: 'Commit output docs'
-      uses: stefanzweifel/git-auto-commit-action@v4
+      uses: stefanzweifel/git-auto-commit-action@v7
       with:
         commit_message: Regenerated docs/APIs for sha ${{ env.COMMIT_SHORT_SHA }}
-        ref: "university_dev"
-    - name: 'Checkout dev site'
-      uses: actions/checkout@v3
-      with:
-        repository: NMBU-Campus/nmbu-campus.github.io
-        path: nmbu-campus.github.io
-        token:  ${{ secrets.CI_PUSH_PAT }}
-    - name: 'Delete old docs from dev site'
-      run: rm -rf ./nmbu-campus.github.io/ontology/*
-    - name: 'Copy new docs to dev site'
-      run: cp -r ./Doc/* ./nmbu-campus.github.io/ontology/
-    - name: 'Commit and push updated docs'
-      run: |
-        cd ./nmbu-campus.github.io/ontology/
-        git config --global user.email "github-actions@github.com"
-        git config --global user.name "github-actions[bot]"
-        git add . 
-        git commit -a -m "Updated docs to SHA ${{ env.COMMIT_SHORT_SHA }}"
-        git push
+        ref: ${{ github.head_ref }}
