@@ -35,6 +35,7 @@ A piece of land upon which zero or more buildings may be situated.
 ### General
 * [Point](../../Point/Point.md).isPointOf
 * [Agent](../../Agent/Agent.md).owns
+* [List](../../List.md).includes
 * [Space](../Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy

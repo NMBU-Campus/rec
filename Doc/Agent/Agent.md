@@ -40,6 +40,7 @@ The human, group, or machine that consumes or acts upon an object or data. This 
 ### General
 * [Point](../Point/Point.md).isPointOf
 * [Agent](#).owns
+* [List](../List.md).includes
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy

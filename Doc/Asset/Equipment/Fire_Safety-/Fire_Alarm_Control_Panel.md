@@ -32,6 +32,7 @@ Fire alarm panel is the controlling component of a fire alarm system.
 ### General
 * [Point](../../../Point/Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
+* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds
 * [Equipment](../Equipment.md).isFedBy

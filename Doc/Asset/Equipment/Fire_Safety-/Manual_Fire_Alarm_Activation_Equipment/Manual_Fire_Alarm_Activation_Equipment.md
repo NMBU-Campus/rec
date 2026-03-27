@@ -35,6 +35,7 @@ A device for manually activating fire alarm
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy

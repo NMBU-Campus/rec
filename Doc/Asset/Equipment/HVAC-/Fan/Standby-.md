@@ -32,6 +32,7 @@ Fan that is activated as part of a lead/lag operation or when a primary fan rais
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy

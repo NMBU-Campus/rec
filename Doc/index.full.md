@@ -438,6 +438,7 @@
         * [ErrorReport](Information/ServiceObject/ErrorReport.md)
         * [NotificationObject](Information/ServiceObject/NotificationObject.md)
         * [WorkOrder](Information/ServiceObject/WorkOrder.md)
+* [List](List.md)
 * [Point](Point/Point.md)
     * [Alarm](Point/Alarm/Alarm.md)
         * [Air_Alarm](Point/Alarm/Air-/Air_Alarm.md)

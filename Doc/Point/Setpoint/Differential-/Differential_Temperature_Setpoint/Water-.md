@@ -37,6 +37,7 @@ Sets the target differential temperature between the start and end of a heat tra
 ### General
 * [Point](../../../Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../Asset/Equipment/Equipment.md).isFedBy

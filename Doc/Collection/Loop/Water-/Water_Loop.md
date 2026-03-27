@@ -35,6 +35,7 @@ A collection of equipment that transport and regulate water among each other
 ### General
 * [Point](../../../Point/Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
+* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy

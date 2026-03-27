@@ -32,6 +32,7 @@ A complete lighting unit consisting of a lamp or lamps and ballast(s) (when appl
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy

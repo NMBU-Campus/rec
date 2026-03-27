@@ -32,6 +32,7 @@ Fan moving outside air; air that is supplied into the building from the outdoors
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy

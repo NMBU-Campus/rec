@@ -38,6 +38,7 @@ The amount of light that passes through or is emitted from the sun and falls wit
 ### General
 * [Point](../Point.md).isPointOf
 * [Agent](../../Agent/Agent.md).owns
+* [List](../../List.md).includes
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy

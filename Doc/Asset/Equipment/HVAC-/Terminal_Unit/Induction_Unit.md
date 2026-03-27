@@ -32,6 +32,7 @@ A device with an primary air connection and integrated coil and condensate pan t
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds
 * [Equipment](../../Equipment.md).isFedBy

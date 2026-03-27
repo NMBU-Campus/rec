@@ -32,6 +32,7 @@ A pump that performs work on chilled water; typically part of a chilled water sy
 ### General
 * [Point](../../../../../Point/Point.md).isPointOf
 * [Agent](../../../../../Agent/Agent.md).owns
+* [List](../../../../../List.md).includes
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Equipment.md).feeds
 * [Equipment](../../../Equipment.md).isFedBy

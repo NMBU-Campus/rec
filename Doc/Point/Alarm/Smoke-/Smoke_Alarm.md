@@ -39,6 +39,7 @@ An alarm that indicates the off-normal conditions associated with smoke.
 ### General
 * [Point](../../Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
+* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy

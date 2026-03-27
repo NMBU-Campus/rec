@@ -33,6 +33,7 @@ A type of solar panels that convert solar radiation into usable thermal and elec
 ### General
 * [Point](../../../Point/Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
+* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds
 * [Equipment](../Equipment.md).isFedBy

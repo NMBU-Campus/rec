@@ -37,6 +37,7 @@ User provided adjustment of zone temperature, typically in the range of +/- 5 de
 ### General
 * [Point](../../Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
+* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy

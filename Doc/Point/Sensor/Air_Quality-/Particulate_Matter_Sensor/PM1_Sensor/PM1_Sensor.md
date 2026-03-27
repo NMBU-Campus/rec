@@ -39,6 +39,7 @@ Detects matter of size 1 micron
 ### General
 * [Point](../../../../Point.md).isPointOf
 * [Agent](../../../../../Agent/Agent.md).owns
+* [List](../../../../../List.md).includes
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).isFedBy

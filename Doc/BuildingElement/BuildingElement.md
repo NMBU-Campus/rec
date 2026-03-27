@@ -44,6 +44,7 @@ A part that constitutes a piece of a building's structural makeup. E.g., Facade,
 ### General
 * [Point](../Point/Point.md).isPointOf
 * [Agent](../Agent/Agent.md).owns
+* [List](../List.md).includes
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../Asset/Equipment/Equipment.md).isFedBy

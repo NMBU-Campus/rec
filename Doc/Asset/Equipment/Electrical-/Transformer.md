@@ -32,6 +32,7 @@ A Transformer is usually fed by a high-voltage source and then steps down the vo
 ### General
 * [Point](../../../Point/Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
+* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds
 * [Equipment](../Equipment.md).isFedBy

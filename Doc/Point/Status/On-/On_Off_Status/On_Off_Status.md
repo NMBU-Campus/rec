@@ -39,6 +39,7 @@ Indicates the on/off status of a control loop, relay or equipment
 ### General
 * [Point](../../../Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../Asset/Equipment/Equipment.md).isFedBy

@@ -76,6 +76,7 @@ A Sensor is an input point that represents the value of a device or instrument d
 ### General
 * [Point](../Point.md).isPointOf
 * [Agent](../../Agent/Agent.md).owns
+* [List](../../List.md).includes
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy

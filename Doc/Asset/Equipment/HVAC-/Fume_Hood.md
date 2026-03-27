@@ -32,6 +32,7 @@ A fume-collection device mounted over a work space, table, or shelf and serving 
 ### General
 * [Point](../../../Point/Point.md).isPointOf
 * [Agent](../../../Agent/Agent.md).owns
+* [List](../../../List.md).includes
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds
 * [Equipment](../Equipment.md).isFedBy

@@ -31,6 +31,7 @@ A collection of devices that generates electricity
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
 * [Agent](../../../../Agent/Agent.md).owns
+* [List](../../../../List.md).includes
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../Asset/Equipment/Equipment.md).isFedBy
