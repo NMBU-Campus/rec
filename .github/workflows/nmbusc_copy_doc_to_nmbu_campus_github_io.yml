@@ -1,4 +1,4 @@
-name: Copy Doc to https://nmbu-campus.github.io
+name: NMBUSC Copy Doc to https://nmbu-campus.github.io
 
 on:
   workflow_dispatch:
