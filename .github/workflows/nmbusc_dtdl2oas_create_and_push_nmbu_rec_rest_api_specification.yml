@@ -1,4 +1,4 @@
-name: DTDL2OAS Create and push NMBU REC REST API specification
+name: NMBUSC DTDL2OAS Create and push NMBU REC REST API specification
 
 on:
   workflow_dispatch:

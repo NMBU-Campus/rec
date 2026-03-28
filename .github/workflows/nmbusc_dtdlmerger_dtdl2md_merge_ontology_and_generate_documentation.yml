@@ -1,4 +1,4 @@
-name: DTDLMerger DTDL2MD Merge ontology and generate documentation
+name: NMBUSC DTDLMerger DTDL2MD Merge ontology and generate documentation
 
 on:
   workflow_dispatch:
