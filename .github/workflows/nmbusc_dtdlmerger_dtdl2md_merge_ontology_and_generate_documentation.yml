@@ -35,6 +35,11 @@ jobs:
       run: dotnet run --project ./Tools/DTDLMerger/ ./Source/DTDLv2/ > ./RealEstateCore.DTDLv2.jsonld
     - name: Build DTDL2MD
       run: dotnet build ./Tools/DTDL2MD/
+    - name: Delete old docs
+      run: |
+        mv Doc/index.md ./DocIndexBackup.md
+        rm -rf Doc/*
+        mv DocIndexBackup.md ./Doc/index.md
     - name: Run DTDL2MD to generate docs
       run: dotnet run --project ./Tools/DTDL2MD/ -i ./RealEstateCore.DTDLv2.jsonld -o ./Doc/
     - name: 'Commit merged output'
