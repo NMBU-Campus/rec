@@ -40,6 +40,7 @@ An organization of any sort (e.g., a business, association, project, consortium,
 ## Target Of
 ### General
 * [Point](../../Point/Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../Agent.md).owns
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds

@@ -31,6 +31,7 @@ A terminal unit for which supply air flow rate is constant and the supply air te
 ## Target Of
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds

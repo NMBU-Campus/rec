@@ -26,6 +26,7 @@ An event emanating from or targeting a Point; e.g., an individual Observation fr
 ## Target Of
 ### General
 * [Point](../../Point/Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../../Agent/Agent.md).owns
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds

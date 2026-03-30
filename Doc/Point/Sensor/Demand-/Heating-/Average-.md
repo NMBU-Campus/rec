@@ -36,6 +36,7 @@ Measures the average power consumed by a heating process as the amount of power 
 ## Target Of
 ### General
 * [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds

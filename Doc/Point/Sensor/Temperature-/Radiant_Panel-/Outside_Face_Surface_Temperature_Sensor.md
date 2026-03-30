@@ -36,6 +36,7 @@ Measures the outside surface (relative to the space) of the radiant panel of a r
 ## Target Of
 ### General
 * [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds

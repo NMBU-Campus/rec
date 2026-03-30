@@ -1489,6 +1489,7 @@
         * [Thermostat_Status](Point/Status/Thermostat-.md)
         * [Tint_Status](Point/Status/Tint-.md)
         * [Valve_Status](Point/Status/Valve-.md)
+* [Root](Root/Root.md)
 * [Space](Space/Space.md)
     * [Architecture](Space/Architecture/Architecture.md)
         * [Building](Space/Architecture/Building/Building.md)
