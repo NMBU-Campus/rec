@@ -5,7 +5,7 @@ A generic base interface that can target any twin type, or be extended by other 
 
 
 **Display name:** Root<br />
-**DTMI:** dtmi:org:nmbu:Root;1
+**DTMI:** dtmi:org:nmbu:campus:Root;1
 
 ---
 
