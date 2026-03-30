@@ -1,5 +1,5 @@
 {
-  "@id": "dtmi:org:nmbu:Root;1",
+  "@id": "dtmi:org:nmbu:campus:Root;1",
   "@type": "Interface",
   "contents": [
     {
