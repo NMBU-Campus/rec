@@ -12991,20 +12991,6 @@
     ]
   },
   {
-    "@id": "dtmi:org:brickschema:schema:Brick:Heat_Meter;1",
-    "@type": "Interface",
-    "description": {
-      "en": "A meter that measures the usage or consumption of heat energy"
-    },
-    "displayName": {
-      "en": "Heat Meter"
-    },
-    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ]
-  },
-  {
     "@id": "dtmi:org:brickschema:schema:Brick:Heat_Sink_Temperature_Sensor;1",
     "@type": "Interface",
     "contents": [
@@ -13896,20 +13882,6 @@
       "en": "Load Shed Setpoint"
     },
     "extends": "dtmi:org:brickschema:schema:Brick:Load_Setpoint;1",
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ]
-  },
-  {
-    "@id": "dtmi:org:brickschema:schema:Brick:Local_Heating_Meter;1",
-    "@type": "Interface",
-    "description": {
-      "en": "A meter that measures the usage or consumption of local heating services"
-    },
-    "displayName": {
-      "en": "Local Heating Meter"
-    },
-    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -14983,20 +14955,6 @@
       "en": "Off Command"
     },
     "extends": "dtmi:org:brickschema:schema:Brick:On_Off_Command;1",
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ]
-  },
-  {
-    "@id": "dtmi:org:brickschema:schema:Brick:Oil_Meter;1",
-    "@type": "Interface",
-    "description": {
-      "en": "A meter that measures the usage or consumption of oil"
-    },
-    "displayName": {
-      "en": "Oil Meter"
-    },
-    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
