@@ -1,0 +1,14 @@
+{
+    "@id": "dtmi:org:brickschema:schema:Brick:Local_Cooling_Meter;1",
+    "@type": "Interface",
+    "description": {
+      "en": "A meter that measures cooling energy and/or power consumed by a local (on-site) cooling system."
+    },
+    "displayName": {
+      "en": "Local Cooling Meter"
+    },
+    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  }
