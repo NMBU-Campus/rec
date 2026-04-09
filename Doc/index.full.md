@@ -217,6 +217,7 @@
             * [Energy_Meter](Asset/Equipment/Meter/Energy-.md)
             * [Gas_Meter](Asset/Equipment/Meter/Gas-/Gas_Meter.md)
                 * [Building_Gas_Meter](Asset/Equipment/Meter/Gas-/Building-.md)
+            * [Local_Cooling_Meter](Asset/Equipment/Meter/Local_Cooling-.md)
             * [Solar_Energy_Meter](Asset/Equipment/Meter/Solar_Energy-.md)
             * [Thermal_Power_Meter](Asset/Equipment/Meter/Thermal_Power-.md)
             * [Water_Meter](Asset/Equipment/Meter/Water-/Water_Meter.md)

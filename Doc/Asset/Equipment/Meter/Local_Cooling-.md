@@ -1,47 +1,28 @@
-[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](#)
-# Meter
+[Index](../../../index.md) > [Asset](../../Asset.md) > [Equipment](../Equipment.md) > [Meter](Meter.md) > [Local_Cooling_Meter](#)
+# Local_Cooling_Meter
 
-A device that measure usage or consumption of some media --- typically a form energy or power.
+A meter that measures cooling energy and/or power consumed by a local (on-site) cooling system.
 
 
-**Display name:** Meter<br />
-**DTMI:** dtmi:org:brickschema:schema:Brick:Meter;1
-
----
-
-## Child interfaces
-* [Building_Meter](Building-/Building_Meter.md)
-* [District_Heating_Meter](District_Heating-.md)
-* [Electrical_Meter](Electrical-/Electrical_Meter.md)
-* [Energy_Meter](Energy-.md)
-* [Gas_Meter](Gas-/Gas_Meter.md)
-* [Local_Cooling_Meter](Local_Cooling-.md)
-* [Solar_Energy_Meter](Solar_Energy-.md)
-* [Thermal_Power_Meter](Thermal_Power-.md)
-* [Water_Meter](Water-/Water_Meter.md)
+**Display name:** Local Cooling Meter<br />
+**DTMI:** dtmi:org:brickschema:schema:Brick:Local_Cooling_Meter;1
 
 ---
 
 ## Relationships
 
-|Name|Display name|Description|Multiplicity|Target|Properties|Writable|
-|-|-|-|-|-|-|-|
-|hasSubMeter|**en**: has sub-meter||0-Infinity|[Meter](#)||True|
-|isSubMeterOf|**en**: is sub-meter of||0-Infinity|[Meter](#)||True|
-|meters|**en**: meters||0-Infinity|||True|
 ### Inherited Relationships
 * **[Equipment](../Equipment.md):** feeds, isFedBy
+* **[Meter](Meter.md):** hasSubMeter, isSubMeterOf, meters
 * **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
 
 ---
 
 ## Properties
 
-|Name|Display name|Description|Schema|Writable|
-|-|-|-|-|-|
-|isVirtualMeter|**en**: is virtual meter||boolean|True|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
+* **[Meter](Meter.md):** isVirtualMeter
 * **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
@@ -62,12 +43,11 @@ A device that measure usage or consumption of some media --- typically a form en
 * [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
 * [Portfolio](../../../Collection/Portfolio.md).includes
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Meter](#).meters
-### Direct
-* [Meter](#).hasSubMeter
-* [Meter](#).isSubMeterOf
+* [Meter](Meter.md).meters
 ### Inherited
 * [Loop](../../../Collection/Loop/Loop.md).includes
+* [Meter](Meter.md).hasSubMeter
+* [Meter](Meter.md).isSubMeterOf
 * [Asset](../../Asset.md).hasPart
 * [Asset](../../Asset.md).isPartOf
 * [EquipmentCollection](../../../Collection/Equipment-.md).includes
