@@ -750,6 +750,29 @@
     ]
   },
   {
+    "@id": "dtmi:org:nmbu:campus:Root;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "displayName": {
+          "en": "containsTwin"
+        },
+        "name": "containsTwin",
+        "writable": true
+      }
+    ],
+    "description": {
+      "en": "A generic base interface that can target any twin type, or be extended by other interfaces to constrain which twin types may be targeted by the relationship"
+    },
+    "displayName": {
+      "en": "Root"
+    },
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
     "@id": "dtmi:org:w3id:rec:Agent;1",
     "@type": "Interface",
     "contents": [
@@ -2303,29 +2326,6 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
     "@type": "Interface",
-    "contents": [
-      {
-        "@type": "Property",
-        "displayName": {
-          "en": "last known value"
-        },
-        "name": "lastKnownValue",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "timestamp",
-              "schema": "dateTime"
-            }
-          ]
-        },
-        "writable": true
-      }
-    ],
     "description": {
       "en": "A Setpoint is an input value at which the desired property is set"
     },
@@ -2822,6 +2822,7 @@
         "displayName": {
           "en": "Bookable"
         },
+        "maxMultiplicity": 1,
         "name": "isBookableOf",
         "target": "dtmi:org:w3id:rec:Room;1",
         "writable": true
@@ -3985,6 +3986,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets some property of CO2"
     },
@@ -4144,6 +4155,14 @@
     "@type": "Interface",
     "contents": [
       {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      },
+      {
         "@type": "Property",
         "description": {
           "en": "Brick tags associated with this interface."
@@ -4233,6 +4252,14 @@
     "@type": "Interface",
     "contents": [
       {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      },
+      {
         "@type": "Property",
         "description": {
           "en": "Brick tags associated with this interface."
@@ -4302,6 +4329,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Deadband_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets the size of a deadband"
     },
@@ -4354,6 +4391,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Demand_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets the rate required for a process"
     },
@@ -4394,6 +4441,14 @@
     "@type": "Interface",
     "contents": [
       {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:TemperatureObservation;1"
+      },
+      {
         "@type": "Property",
         "description": {
           "en": "Brick tags associated with this interface."
@@ -4429,6 +4484,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Differential_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      }
+    ],
     "description": {
       "en": "A type of Setpoints that is related to the difference between two measurements"
     },
@@ -4895,6 +4960,14 @@
     "@type": "Interface",
     "contents": [
       {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      },
+      {
         "@type": "Property",
         "description": {
           "en": "Brick tags associated with this interface."
@@ -5114,6 +5187,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Flow_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:VolumeFlowRateObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets flow"
     },
@@ -5204,6 +5287,14 @@
     "@id": "dtmi:org:brickschema:schema:Brick:Frequency_Setpoint;1",
     "@type": "Interface",
     "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:FrequencyObservation;1"
+      },
       {
         "@type": "Property",
         "description": {
@@ -5655,6 +5746,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Humidity_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:RelativeHumidityObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets humidity"
     },
@@ -5745,6 +5846,14 @@
     "@id": "dtmi:org:brickschema:schema:Brick:Illuminance_Setpoint;1",
     "@type": "Interface",
     "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:IlluminanceObservation;1"
+      },
       {
         "@type": "Property",
         "description": {
@@ -6037,6 +6146,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Load_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      }
+    ],
     "displayName": {
       "en": "Load Setpoint"
     },
@@ -6267,6 +6386,14 @@
     "@id": "dtmi:org:brickschema:schema:Brick:Luminance_Setpoint;1",
     "@type": "Interface",
     "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:LuminanceObservation;1"
+      },
       {
         "@type": "Property",
         "description": {
@@ -7031,6 +7158,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Pressure_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets pressure"
     },
@@ -7590,6 +7727,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Speed_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:VelocityObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets speed"
     },
@@ -7795,6 +7942,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Temperature_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:TemperatureObservation;1"
+      }
+    ],
     "description": {
       "en": "Sets temperature"
     },
@@ -7846,6 +8003,16 @@
   {
     "@id": "dtmi:org:brickschema:schema:Brick:Time_Setpoint;1",
     "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DateTimeObservation;1"
+      }
+    ],
     "displayName": {
       "en": "Time Setpoint"
     },
@@ -8110,6 +8277,14 @@
     "@id": "dtmi:org:brickschema:schema:Brick:Voltage_Ratio_Setpoint;1",
     "@type": "Interface",
     "contents": [
+      {
+        "@type": "Component",
+        "displayName": {
+          "en": "last known value"
+        },
+        "name": "lastKnownValue",
+        "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+      },
       {
         "@type": "Property",
         "description": {
@@ -12816,20 +12991,6 @@
     ]
   },
   {
-    "@id": "dtmi:org:brickschema:schema:Brick:Heat_Meter;1",
-    "@type": "Interface",
-    "description": {
-      "en": "A meter that measures the usage or consumption of heat energy"
-    },
-    "displayName": {
-      "en": "Heat Meter"
-    },
-    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ]
-  },
-  {
     "@id": "dtmi:org:brickschema:schema:Brick:Heat_Sink_Temperature_Sensor;1",
     "@type": "Interface",
     "contents": [
@@ -13726,13 +13887,13 @@
     ]
   },
   {
-    "@id": "dtmi:org:brickschema:schema:Brick:Local_Heating_Meter;1",
+    "@id": "dtmi:org:brickschema:schema:Brick:Local_Cooling_Meter;1",
     "@type": "Interface",
     "description": {
-      "en": "A meter that measures the usage or consumption of local heating services"
+      "en": "A meter that measures cooling energy and/or power consumed by a local (on-site) cooling system."
     },
     "displayName": {
-      "en": "Local Heating Meter"
+      "en": "Local Cooling Meter"
     },
     "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
     "@context": [
@@ -14808,20 +14969,6 @@
       "en": "Off Command"
     },
     "extends": "dtmi:org:brickschema:schema:Brick:On_Off_Command;1",
-    "@context": [
-      "dtmi:dtdl:context;2"
-    ]
-  },
-  {
-    "@id": "dtmi:org:brickschema:schema:Brick:Oil_Meter;1",
-    "@type": "Interface",
-    "description": {
-      "en": "A meter that measures the usage or consumption of oil"
-    },
-    "displayName": {
-      "en": "Oil Meter"
-    },
-    "extends": "dtmi:org:brickschema:schema:Brick:Meter;1",
     "@context": [
       "dtmi:dtdl:context;2"
     ]
@@ -16969,7 +17116,6 @@
       "en": "Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Deadband_Setpoint;1"
     ],
     "@context": [
@@ -18551,6 +18697,31 @@
     ],
     "displayName": {
       "en": "Data size observation"
+    },
+    "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
+    "@context": [
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@id": "dtmi:org:w3id:rec:DateTimeObservation;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "description": {
+          "en": "Observed date time for observation or setpoint."
+        },
+        "displayName": {
+          "en": "Observed date time"
+        },
+        "name": "observedDateTime",
+        "schema": "dateTime",
+        "writable": true
+      }
+    ],
+    "displayName": {
+      "en": "DateTime observation"
     },
     "extends": "dtmi:org:w3id:rec:ObservationEvent;1",
     "@context": [
@@ -20386,7 +20557,6 @@
       "en": "Air Flow Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Air_Flow_Setpoint;1"
     ],
     "@context": [
@@ -20403,7 +20573,6 @@
       "en": "Air Flow Demand Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Demand_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Air_Flow_Setpoint;1"
     ],
     "@context": [
@@ -24763,8 +24932,7 @@
       "en": "Load Shed Differential Pressure Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Load_Shed_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Load_Shed_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -26160,7 +26328,6 @@
       "en": "Occupied Cooling Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Cooling_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -26274,7 +26441,6 @@
       "en": "Occupied Heating Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Heating_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -28088,8 +28254,7 @@
       "en": "Static Pressure Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Static_Pressure_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Deadband_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Static_Pressure_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -28376,7 +28541,6 @@
       "en": "Supply Air Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Air_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -28994,7 +29158,6 @@
       "en": "Unoccupied Cooling Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Cooling_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -29105,7 +29268,6 @@
       "en": "Unoccupied Heating Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Heating_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -31104,8 +31266,7 @@
       "en": "Cooling Supply Air Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Deadband_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Cooling_Temperature_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Deadband_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -31476,8 +31637,7 @@
       "en": "Discharge Air Flow Demand Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Air_Flow_Demand_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -31584,8 +31744,7 @@
       "en": "Discharge Air Static Pressure Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Static_Pressure_Deadband_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Discharge_Air_Static_Pressure_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Static_Pressure_Deadband_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -31652,7 +31811,6 @@
       "en": "Discharge Air Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -32887,7 +33045,6 @@
       "en": "Entering Water Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -33383,8 +33540,7 @@
       "en": "Heating Supply Air Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Deadband_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Heating_Temperature_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Deadband_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -34573,7 +34729,6 @@
       "en": "Leaving Water Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Setpoint;1"
     ],
     "@context": [
@@ -36656,7 +36811,6 @@
       "en": "Supply Air Flow Demand Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Supply_Air_Flow_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Air_Flow_Demand_Setpoint;1"
     ],
     "@context": [
@@ -37580,7 +37734,6 @@
       "en": "Chilled Water Differential Pressure Load Shed Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Load_Shed_Differential_Pressure_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Setpoint;1"
     ],
     "@context": [
@@ -37620,8 +37773,7 @@
       "en": "Cooling Discharge Air Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Deadband_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Cooling_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Deadband_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -38009,8 +38161,7 @@
       "en": "Exhaust Air Stack Flow Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Stack_Flow_Setpoint;1",
-      "dtmi:org:brickschema:schema:Brick:Air_Flow_Deadband_Setpoint;1"
+      "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Stack_Flow_Setpoint;1"
     ],
     "@context": [
       "dtmi:dtdl:context;2"
@@ -38083,7 +38234,6 @@
       "en": "Heating Discharge Air Temperature Deadband Setpoint"
     },
     "extends": [
-      "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Heating_Setpoint;1",
       "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Deadband_Setpoint;1"
     ],
     "@context": [

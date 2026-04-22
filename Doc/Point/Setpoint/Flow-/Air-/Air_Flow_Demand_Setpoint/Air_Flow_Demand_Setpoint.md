@@ -10,8 +10,14 @@ Sets the rate of air flow required for a process
 ---
 
 ## Child interfaces
-* [Discharge_Air_Flow_Demand_Setpoint](../Discharge-/Discharge_Air_Flow_Demand_Setpoint.md)
-* [Supply_Air_Flow_Demand_Setpoint](../Supply-/Supply_Air_Flow_Demand_Setpoint.md)
+* [Supply_Air_Flow_Demand_Setpoint](Supply-.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Flow_Setpoint](../../Flow_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -26,13 +32,13 @@ Sets the rate of air flow required for a process
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../../Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds

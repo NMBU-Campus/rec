@@ -10,10 +10,17 @@ Sets the rate required for a process
 ---
 
 ## Child interfaces
-* [Air_Flow_Demand_Setpoint](../Flow-/Air-/Air_Flow_Demand_Setpoint/Air_Flow_Demand_Setpoint.md)
 * [Cooling_Demand_Setpoint](Cooling-.md)
 * [Heating_Demand_Setpoint](Heating-.md)
 * [Preheat_Demand_Setpoint](Preheat-.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueObservation](../../../Event/Point-/ObservationEvent/DoubleValueObservation.md)|
 
 ---
 
@@ -28,13 +35,13 @@ Sets the rate required for a process
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

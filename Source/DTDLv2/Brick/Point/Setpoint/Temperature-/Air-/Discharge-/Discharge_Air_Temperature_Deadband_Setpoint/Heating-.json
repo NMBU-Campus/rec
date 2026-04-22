@@ -31,7 +31,6 @@
     "en": "Heating Discharge Air Temperature Deadband Setpoint"
   },
   "extends": [
-    "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Heating_Setpoint;1",
     "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Deadband_Setpoint;1"
   ],
   "@context": [

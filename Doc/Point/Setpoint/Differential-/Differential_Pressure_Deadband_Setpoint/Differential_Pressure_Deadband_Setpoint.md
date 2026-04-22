@@ -17,6 +17,13 @@ Sets the size of a deadband of differential pressure
 
 ---
 
+## Components
+
+### Inherited Components
+* **[Differential_Setpoint](../Differential_Setpoint.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -28,13 +35,13 @@ Sets the size of a deadband of differential pressure
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds

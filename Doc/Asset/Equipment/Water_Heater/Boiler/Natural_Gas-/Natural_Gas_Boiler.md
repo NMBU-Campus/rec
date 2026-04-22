@@ -34,6 +34,7 @@ A closed, pressure vessel that uses natural gas for heating water or other fluid
 ## Target Of
 ### General
 * [Point](../../../../../Point/Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Equipment.md).feeds

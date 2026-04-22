@@ -10,12 +10,19 @@ Sets air flow
 ---
 
 ## Child interfaces
-* [Air_Flow_Deadband_Setpoint](Air_Flow_Deadband_Setpoint/Air_Flow_Deadband_Setpoint.md)
+* [Air_Flow_Deadband_Setpoint](Air_Flow_Deadband_Setpoint.md)
 * [Air_Flow_Demand_Setpoint](Air_Flow_Demand_Setpoint/Air_Flow_Demand_Setpoint.md)
 * [Discharge_Air_Flow_Setpoint](Discharge-/Discharge_Air_Flow_Setpoint.md)
 * [Exhaust_Air_Flow_Setpoint](Exhaust-/Exhaust_Air_Flow_Setpoint.md)
 * [Outside_Air_Flow_Setpoint](Outside-.md)
 * [Supply_Air_Flow_Setpoint](Supply-/Supply_Air_Flow_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Flow_Setpoint](../Flow_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -30,13 +37,13 @@ Sets air flow
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds

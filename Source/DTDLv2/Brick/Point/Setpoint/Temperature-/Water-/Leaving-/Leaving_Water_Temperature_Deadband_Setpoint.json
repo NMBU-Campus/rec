@@ -31,7 +31,6 @@
     "en": "Leaving Water Temperature Deadband Setpoint"
   },
   "extends": [
-    "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
     "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Setpoint;1"
   ],
   "@context": [
