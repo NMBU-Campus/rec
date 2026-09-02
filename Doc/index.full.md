@@ -1081,6 +1081,7 @@
             * [Battery_Voltage_Sensor](Point/Sensor/Voltage-/Battery-.md)
             * [DC_Bus_Voltage_Sensor](Point/Sensor/Voltage-/DC_Bus-.md)
             * [Output_Voltage_Sensor](Point/Sensor/Voltage-/Output-.md)
+        * [Volume_Sensor](Point/Sensor/Volume-/Volume_Sensor.md)
         * [Water_Level_Sensor](Point/Sensor/Water_Level-/Water_Level_Sensor.md)
             * [Collection_Basin_Water_Level_Sensor](Point/Sensor/Water_Level-/Collection_Basin-.md)
             * [Deionised_Water_Level_Sensor](Point/Sensor/Water_Level-/Deionised-.md)

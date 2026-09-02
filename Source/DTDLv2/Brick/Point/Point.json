@@ -486,6 +486,10 @@
             "name": "Voltage_Imbalance"
           },
           {
+            "enumValue": "Volume",
+            "name": "Volume"
+          },
+          {
             "enumValue": "Weather_Condition",
             "name": "Weather_Condition"
           },

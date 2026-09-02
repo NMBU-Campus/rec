@@ -977,6 +977,16 @@ brick:Voltage_Sensor
       sh:nodeKind sh:IRI ;
     ] ;
 .
+brick:Volume_Sensor
+  sh:property [
+      rdf:type sh:PropertyShape ;
+      sh:path brick:lastKnownValue ;
+      sh:class rec:VolumeObservation ;
+      sh:maxCount 1 ;
+      sh:name "last known value" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+.
 brick:Wardrobe
   owl:deprecated "true"^^xsd:boolean ;
 .
