@@ -4,10 +4,7 @@
   "displayName": {
     "en": "Air Temperature Integral Time Parameter"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Temperature_Parameter;1",
-    "dtmi:org:brickschema:schema:Brick:Integral_Time_Parameter;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Integral_Time_Parameter;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

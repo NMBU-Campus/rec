@@ -27,10 +27,7 @@
   "displayName": {
     "en": "Open Heating Valve Outside Air Temperature Setpoint"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_Setpoint;1",
-    "dtmi:org:brickschema:schema:Brick:Heating_Temperature_Setpoint;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_Setpoint;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

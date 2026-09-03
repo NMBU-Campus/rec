@@ -27,10 +27,7 @@
   "displayName": {
     "en": "Occupied Air Temperature Heating Setpoint"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Occupied_Air_Temperature_Setpoint;1",
-    "dtmi:org:brickschema:schema:Brick:Heating_Temperature_Setpoint;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Occupied_Air_Temperature_Setpoint;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

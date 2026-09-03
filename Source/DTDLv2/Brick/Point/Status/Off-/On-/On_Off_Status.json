@@ -7,10 +7,7 @@
   "displayName": {
     "en": "On Off Status"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:On_Status;1",
-    "dtmi:org:brickschema:schema:Brick:Off_Status;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:On_Status;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]
