@@ -1,29 +1,6 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Status;1",
   "@type": "Interface",
-  "contents": [
-    {
-      "@type": "Property",
-      "displayName": {
-        "en": "last known value"
-      },
-      "name": "lastKnownValue",
-      "schema": {
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "value",
-            "schema": "string"
-          },
-          {
-            "name": "timestamp",
-            "schema": "dateTime"
-          }
-        ]
-      },
-      "writable": true
-    }
-  ],
   "description": {
     "en": "A Status is input point that reports the current operating mode, state, position, or condition of an item. Statuses are observations and should be considered 'read-only'"
   },

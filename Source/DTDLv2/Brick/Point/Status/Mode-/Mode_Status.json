@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Mode_Status;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:StringValueStatus;1"
+    }
+  ],
   "description": {
     "en": "Indicates which mode a system, device or control loop is currently in"
   },

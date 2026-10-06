@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:org:w3id:rec:TemperatureParameter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": [
+        "Property",
+        "Temperature"
+      ],
+      "displayName": {
+        "en": "value"
+      },
+      "name": "value",
+      "schema": "double",
+      "unit": "degreeCelsius",
+      "writable": true
+    }
+  ],
+  "displayName": {
+    "en": "Temperature parameter"
+  },
+  "extends": "dtmi:org:w3id:rec:ParameterEvent;1",
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}
