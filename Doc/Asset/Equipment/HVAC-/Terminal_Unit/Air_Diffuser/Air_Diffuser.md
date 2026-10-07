@@ -35,6 +35,7 @@ A device that is a component of the air distribution system that controls the de
 ## Target Of
 ### General
 * [Point](../../../../../Point/Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Equipment.md).feeds

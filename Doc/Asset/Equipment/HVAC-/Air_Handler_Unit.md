@@ -31,6 +31,7 @@ Assembly consisting of sections containing a fan or fans and other necessary equ
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds

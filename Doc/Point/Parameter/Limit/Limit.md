@@ -11,24 +11,17 @@ A parameter that places an upper or lower bound on the range of permitted values
 
 ## Child interfaces
 * [Air_Flow_Setpoint_Limit](Air_Flow_Setpoint-/Air_Flow_Setpoint_Limit.md)
+* [Air_Temperature_Setpoint_Limit](../Temperature-/Air_Temperature_Setpoint_Limit/Air_Temperature_Setpoint_Limit.md)
 * [Close_Limit](Close-.md)
 * [Current_Limit](Current-.md)
 * [Differential_Pressure_Setpoint_Limit](Differential_Pressure_Setpoint-/Differential_Pressure_Setpoint_Limit.md)
 * [Fresh_Air_Setpoint_Limit](Fresh_Air_Setpoint-/Fresh_Air_Setpoint_Limit.md)
-* [Max_Limit](Max-.md)
-* [Min_Limit](Min-.md)
+* [Max_Limit](Max-/Max_Limit.md)
+* [Min_Limit](Min-/Min_Limit.md)
 * [Position_Limit](Position-/Position_Limit.md)
 * [Speed_Setpoint_Limit](Speed_Setpoint-/Speed_Setpoint_Limit.md)
 * [Static_Pressure_Setpoint_Limit](Static_Pressure_Setpoint-/Static_Pressure_Setpoint_Limit.md)
 * [Ventilation_Air_Flow_Ratio_Limit](Ventilation_Air_Flow_Ratio-.md)
-
----
-
-## Components
-
-|Name|Display name|Description|Schema|
-|-|-|-|-|
-|lastKnownValue|**en**: last known value||[DoubleValueParameter](../../../Event/Point-/ParameterEvent/DoubleValueParameter.md)|
 
 ---
 
@@ -42,25 +35,27 @@ A parameter that places an upper or lower bound on the range of permitted values
 ## Properties
 
 ### Inherited Properties
+* **[Parameter](../Parameter.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
 
 ## Target Of
 ### General
-* [Portfolio](../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
-* [Lease](../../../Event/Lease.md).leaseOf
-* [Point](../../Point.md).isPointOf
-* [Document](../../../Information/Document/Document.md).documentTopic
-* [Document](../../../Information/Document/Document.md).url
-* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../../Collection/System/System.md).includes
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../Collection/System/System.md).includes
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../../Event/Point-/ActuationEvent.md).targetPoint
@@ -68,7 +63,4 @@ A parameter that places an upper or lower bound on the range of permitted values
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
-* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
-* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
-* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

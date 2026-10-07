@@ -31,6 +31,7 @@ Manual alarm call points are designed for the purpose of raising an alarm manual
 ## Target Of
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds

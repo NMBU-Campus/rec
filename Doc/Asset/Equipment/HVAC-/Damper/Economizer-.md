@@ -31,6 +31,7 @@ A damper that is part of an economizer that is used to module the flow of air
 ## Target Of
 ### General
 * [Point](../../../../Point/Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../Equipment.md).feeds

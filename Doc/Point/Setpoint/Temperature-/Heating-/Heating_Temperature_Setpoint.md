@@ -10,10 +10,17 @@ Sets temperature for heating
 ---
 
 ## Child interfaces
+* [Discharge_Air_Temperature_Heating_Setpoint](../Air-/Discharge-/Discharge_Air_Temperature_Heating_Setpoint.md)
+* [Effective_Air_Temperature_Heating_Setpoint](../Air-/Effective-/Effective_Air_Temperature_Heating_Setpoint.md)
+* [Occupied_Air_Temperature_Heating_Setpoint](../Air-/Occupied-/Occupied_Air_Temperature_Heating_Setpoint.md)
 * [Occupied_Heating_Temperature_Deadband_Setpoint](Occupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Occupied_Heating_Temperature_Setpoint](Occupied-.md)
+* [Open_Heating_Valve_Outside_Air_Temperature_Setpoint](../Air-/Outside-/Open_Heating_Valve-.md)
+* [Supply_Air_Temperature_Heating_Setpoint](../Air-/Supply-/Supply_Air_Temperature_Heating_Setpoint.md)
+* [Unoccupied_Air_Temperature_Heating_Setpoint](../Air-/Unoccupied-/Unoccupied_Air_Temperature_Heating_Setpoint.md)
 * [Unoccupied_Heating_Temperature_Deadband_Setpoint](Unoccupied_Heating_Temperature_Deadband_Setpoint.md)
 * [Unoccupied_Heating_Temperature_Setpoint](Unoccupied-.md)
+* [Zone_Air_Heating_Temperature_Setpoint](../Air-/Zone-/Zone_Air_Heating_Temperature_Setpoint.md)
 
 ---
 
@@ -40,19 +47,20 @@ Sets temperature for heating
 
 ## Target Of
 ### General
-* [Portfolio](../../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
-* [Lease](../../../../Event/Lease.md).leaseOf
-* [Point](../../../Point.md).isPointOf
-* [Document](../../../../Information/Document/Document.md).documentTopic
-* [Document](../../../../Information/Document/Document.md).url
-* [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../../../Collection/System/System.md).includes
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../../Collection/System/System.md).includes
+* [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../../Information/Document/Document.md).documentTopic
+* [Document](../../../../Information/Document/Document.md).url
+* [Lease](../../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../../../Event/Point-/ActuationEvent.md).targetPoint
@@ -60,7 +68,4 @@ Sets temperature for heating
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
-* [ParameterEvent](../../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
-* [SetpointEvent](../../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
-* [StatusEvent](../../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

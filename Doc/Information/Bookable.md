@@ -13,7 +13,7 @@ Description to be added when a Room can be booked. Bookable will include informa
 
 |Name|Display name|Description|Multiplicity|Target|Properties|Writable|
 |-|-|-|-|-|-|-|
-|isBookableOf|**en**: Bookable||0-Infinity|[Room](../Space/Architecture/Room/Room.md)||True|
+|isBookableOf|**en**: Bookable||0-1|[Room](../Space/Architecture/Room/Room.md)||True|
 
 ---
 
@@ -27,6 +27,7 @@ Description to be added when a Room can be booked. Bookable will include informa
 ## Target Of
 ### General
 * [Point](../Point/Point.md).isPointOf
+* [Root](../Root/Root.md).containsTwin
 * [Agent](../Agent/Agent.md).owns
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds

@@ -31,6 +31,7 @@ A heating element typically made of pipe, tube or wire that emits heat that is f
 ## Target Of
 ### General
 * [Point](../../../../../../Point/Point.md).isPointOf
+* [Root](../../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../../Agent/Agent.md).owns
 * [Space](../../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Equipment.md).feeds

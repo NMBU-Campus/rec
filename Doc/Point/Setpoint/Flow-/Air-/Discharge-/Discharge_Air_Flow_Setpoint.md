@@ -10,9 +10,9 @@ Sets discharge air flow
 ---
 
 ## Child interfaces
-* [Cooling_Discharge_Air_Flow_Setpoint](Cooling-.md)
+* [Cooling_Discharge_Air_Flow_Setpoint](Cooling-/Cooling_Discharge_Air_Flow_Setpoint.md)
 * [Discharge_Air_Flow_Demand_Setpoint](Discharge_Air_Flow_Demand_Setpoint.md)
-* [Heating_Discharge_Air_Flow_Setpoint](Heating-.md)
+* [Heating_Discharge_Air_Flow_Setpoint](Heating-/Heating_Discharge_Air_Flow_Setpoint.md)
 * [Occupied_Discharge_Air_Flow_Setpoint](Occupied-/Occupied_Discharge_Air_Flow_Setpoint.md)
 * [Unoccupied_Discharge_Air_Flow_Setpoint](Unoccupied-/Unoccupied_Discharge_Air_Flow_Setpoint.md)
 
@@ -41,19 +41,20 @@ Sets discharge air flow
 
 ## Target Of
 ### General
-* [Portfolio](../../../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../../../Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
-* [Lease](../../../../../Event/Lease.md).leaseOf
-* [Point](../../../../Point.md).isPointOf
-* [Document](../../../../../Information/Document/Document.md).documentTopic
-* [Document](../../../../../Information/Document/Document.md).url
-* [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../../../../Collection/System/System.md).includes
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../../../Collection/System/System.md).includes
+* [Architecture](../../../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../../../Information/Document/Document.md).documentTopic
+* [Document](../../../../../Information/Document/Document.md).url
+* [Lease](../../../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../../../../Event/Point-/ActuationEvent.md).targetPoint
@@ -61,7 +62,4 @@ Sets discharge air flow
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
-* [ParameterEvent](../../../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
-* [SetpointEvent](../../../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
-* [StatusEvent](../../../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

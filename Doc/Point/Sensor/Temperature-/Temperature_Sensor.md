@@ -11,6 +11,7 @@ Measures temperature: the physical property of matter that quantitatively expres
 
 ## Child interfaces
 * [Air_Temperature_Sensor](Air-/Air_Temperature_Sensor.md)
+* [Air_Wet_Bulb_Temperature_Sensor](Air-/Air_Wet_Bulb_Temperature_Sensor/Air_Wet_Bulb_Temperature_Sensor.md)
 * [Heat_Sink_Temperature_Sensor](Heat_Sink-.md)
 * [Natural_Gas_Temperature_Sensor](Natural_Gas-.md)
 * [Radiant_Panel_Temperature_Sensor](Radiant_Panel-/Radiant_Panel_Temperature_Sensor.md)
@@ -43,19 +44,20 @@ Measures temperature: the physical property of matter that quantitatively expres
 
 ## Target Of
 ### General
-* [Portfolio](../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
-* [Lease](../../../Event/Lease.md).leaseOf
-* [Point](../../Point.md).isPointOf
-* [Document](../../../Information/Document/Document.md).documentTopic
-* [Document](../../../Information/Document/Document.md).url
-* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../../Collection/System/System.md).includes
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../Collection/System/System.md).includes
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../../Event/Point-/ActuationEvent.md).targetPoint
@@ -63,7 +65,4 @@ Measures temperature: the physical property of matter that quantitatively expres
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
-* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
-* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
-* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

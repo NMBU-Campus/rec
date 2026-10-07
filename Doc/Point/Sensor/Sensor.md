@@ -52,7 +52,6 @@ A Sensor is an input point that represents the value of a device or instrument d
 * [Torque_Sensor](Torque-/Torque_Sensor.md)
 * [Usage_Sensor](Usage-/Usage_Sensor.md)
 * [Voltage_Sensor](Voltage-/Voltage_Sensor.md)
-* [Volume_Sensor](Volume-.md)
 * [Water_Level_Sensor](Water_Level-/Water_Level_Sensor.md)
 * [Wifi_Associated_Device_Count_Sensor](Wifi_Associated_Device_Count-.md)
 * [Wifi_Probing_Count_Sensor](Wifi_Probing_Count-.md)
@@ -75,19 +74,20 @@ A Sensor is an input point that represents the value of a device or instrument d
 
 ## Target Of
 ### General
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../../Agent/Agent.md).owns
 * [Space](../../Space/Space.md).isLocationOf
-* [Lease](../../Event/Lease.md).leaseOf
-* [Point](../Point.md).isPointOf
-* [Document](../../Information/Document/Document.md).documentTopic
-* [Document](../../Information/Document/Document.md).url
-* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../Collection/System/System.md).includes
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../Collection/System/System.md).includes
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../Information/Document/Document.md).documentTopic
+* [Document](../../Information/Document/Document.md).url
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../Event/Point-/ActuationEvent.md).targetPoint
@@ -95,7 +95,4 @@ A Sensor is an input point that represents the value of a device or instrument d
 * [Asset](../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
-* [ParameterEvent](../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
-* [SetpointEvent](../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
-* [StatusEvent](../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint
