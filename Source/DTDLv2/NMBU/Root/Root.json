@@ -1,0 +1,23 @@
+{
+  "@id": "dtmi:org:nmbu:campus:Root;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "en": "containsTwin"
+      },
+      "name": "containsTwin",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "A generic base interface that can target any twin type, or be extended by other interfaces to constrain which twin types may be targeted by the relationship"
+  },
+  "displayName": {
+    "en": "Root"
+  },
+  "@context": [
+    "dtmi:dtdl:context;2"
+  ]
+}

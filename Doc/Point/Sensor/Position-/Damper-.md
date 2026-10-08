@@ -36,6 +36,7 @@ Measures the current position of a damper in terms of the percent of fully open
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

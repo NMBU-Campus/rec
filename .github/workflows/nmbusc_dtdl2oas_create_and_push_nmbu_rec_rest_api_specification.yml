@@ -1,0 +1,40 @@
+name: NMBUSC DTDL2OAS Create and push NMBU REC REST API specification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: 
+      - "university_dev"
+    paths:
+      - "Source/DTDL**"
+      - "API/REST/Endpoints.csv"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token:  ${{ secrets.CI_PUSH_PAT }}
+    - name: Set short git commit SHA
+      id: vars
+      run: |
+        calculatedSha=$(git rev-parse --short ${{ github.sha }})
+        echo "COMMIT_SHORT_SHA=$calculatedSha" >> $GITHUB_ENV
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: 10.0.x
+    - name: Build DTDLValidator
+      run: dotnet build ./Tools/DTDLValidator/
+    - name: Run DTDLValidator to validate DTDL models
+      run: dotnet run --project ./Tools/DTDLValidator/  --recursive true --directory ./Source/DTDLv2/
+    - name: Build DTDL2OAS
+      run: dotnet build ./Tools/DTDL2OAS/
+    - name: Run DTDL2OAS to generate API specification
+      run: dotnet run --project ./Tools/DTDL2OAS --inputPath ./Source/DTDLv2/ --nuspecPath ./Metadata/RealEstateCore.Ontology.DTDLv2.nuspec --endpointsPath ./API/REST/Endpoints.csv --outputPath ./API/REST
+    - name: 'Commit output docs'
+      uses: stefanzweifel/git-auto-commit-action@v7
+      with:
+        commit_message: Regenerated docs/APIs for sha ${{ env.COMMIT_SHORT_SHA }}

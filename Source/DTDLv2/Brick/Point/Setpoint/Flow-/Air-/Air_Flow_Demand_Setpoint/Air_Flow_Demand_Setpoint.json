@@ -8,7 +8,6 @@
     "en": "Air Flow Demand Setpoint"
   },
   "extends": [
-    "dtmi:org:brickschema:schema:Brick:Demand_Setpoint;1",
     "dtmi:org:brickschema:schema:Brick:Air_Flow_Setpoint;1"
   ],
   "@context": [

@@ -36,6 +36,7 @@ Controls or reports the speed of a pump (typically as a proportion of its full p
 ## Target Of
 ### General
 * [Point](../Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../../Agent/Agent.md).owns
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds

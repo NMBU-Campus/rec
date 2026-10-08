@@ -80,13 +80,14 @@
 ## Properties
 
 ### Inherited Properties
-* **[Space](../../Space.md):** customProperties, customTags, identifiers, name
+* **[Space](../../Space.md):** customProperties, customTags, identifiers, longName, name
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
@@ -102,6 +103,7 @@
 * [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Direct
 * [Apartment](../../../Collection/Apartment.md).includes
+* [Bookable](../../../Information/Bookable.md).isBookableOf
 ### Inherited
 * [Asset](../../../Asset/Asset.md).locatedIn
 * [BuildingElement](../../../BuildingElement/BuildingElement.md).locatedIn

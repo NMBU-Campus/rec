@@ -36,6 +36,7 @@ User provided adjustment of zone temperature, typically in the range of +/- 5 de
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

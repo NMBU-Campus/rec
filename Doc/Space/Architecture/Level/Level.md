@@ -37,13 +37,14 @@ The level of a building, a.k.a. storey, floor, etc.
 |-|-|-|-|-|
 |levelNumber|**en**: level number|**en**: A number indicating the ordinal number of this level within the containing space (typically a Building or in the case of a Mezzanine, sometimes another level). Note that the implementation of this numbering scheme and its starting point is implementation-specific; e.g., the fifth floor below ground may be 0 in some systems, and -5 in others.|integer|True|
 ### Inherited Properties
-* **[Space](../../Space.md):** customProperties, customTags, identifiers, name
+* **[Space](../../Space.md):** customProperties, customTags, identifiers, longName, name
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

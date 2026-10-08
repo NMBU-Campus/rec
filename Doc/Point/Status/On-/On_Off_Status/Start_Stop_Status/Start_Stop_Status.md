@@ -37,6 +37,7 @@ Indicates the active/inactive status of a control loop (but not equipment activi
 ## Target Of
 ### General
 * [Point](../../../../Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds

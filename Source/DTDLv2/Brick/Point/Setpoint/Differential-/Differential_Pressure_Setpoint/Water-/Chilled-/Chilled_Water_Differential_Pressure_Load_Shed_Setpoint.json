@@ -28,7 +28,6 @@
     "en": "Chilled Water Differential Pressure Load Shed Setpoint"
   },
   "extends": [
-    "dtmi:org:brickschema:schema:Brick:Load_Shed_Differential_Pressure_Setpoint;1",
     "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Setpoint;1"
   ],
   "@context": [

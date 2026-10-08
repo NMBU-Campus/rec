@@ -41,6 +41,7 @@ Measures the current position of a component in terms of a fraction of its full 
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

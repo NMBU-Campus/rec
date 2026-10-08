@@ -9,7 +9,14 @@
 ## Child interfaces
 * [Entering_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint](Entering_Medium_Temperature_Hot_Water_Temperature-.md)
 * [Leaving_Medium_Temperature_Hot_Water_Temperature_Load_Shed_Setpoint](Leaving_Medium_Temperature_Hot_Water_Temperature-.md)
-* [Load_Shed_Differential_Pressure_Setpoint](Load_Shed_Differential_Pressure_Setpoint/Load_Shed_Differential_Pressure_Setpoint.md)
+* [Load_Shed_Differential_Pressure_Setpoint](Load_Shed_Differential_Pressure_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Load_Setpoint](../Load_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -24,13 +31,13 @@
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds

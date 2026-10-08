@@ -27,13 +27,14 @@ A piece of land upon which zero or more buildings may be situated.
 ## Properties
 
 ### Inherited Properties
-* **[Space](../Space.md):** customProperties, customTags, identifiers, name
+* **[Space](../Space.md):** customProperties, customTags, identifiers, longName, name
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../Point/Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../../Agent/Agent.md).owns
 * [Space](../Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds

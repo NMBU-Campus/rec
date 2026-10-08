@@ -13,8 +13,14 @@ Sets supply air flow rate
 * [Cooling_Supply_Air_Flow_Setpoint](Cooling-/Cooling_Supply_Air_Flow_Setpoint.md)
 * [Heating_Supply_Air_Flow_Setpoint](Heating-/Heating_Supply_Air_Flow_Setpoint.md)
 * [Occupied_Supply_Air_Flow_Setpoint](Occupied-/Occupied_Supply_Air_Flow_Setpoint.md)
-* [Supply_Air_Flow_Demand_Setpoint](Supply_Air_Flow_Demand_Setpoint.md)
 * [Unoccupied_Supply_Air_Flow_Setpoint](Unoccupied-/Unoccupied_Supply_Air_Flow_Setpoint.md)
+
+---
+
+## Components
+
+### Inherited Components
+* **[Flow_Setpoint](../../Flow_Setpoint.md):** lastKnownValue
 
 ---
 
@@ -29,13 +35,13 @@ Sets supply air flow rate
 
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../../../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../../Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds

@@ -12,6 +12,14 @@
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DateTimeObservation](../../../Event/Point-/ObservationEvent/DateTimeObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,13 +31,13 @@
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

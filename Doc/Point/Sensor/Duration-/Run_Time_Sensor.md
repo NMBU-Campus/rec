@@ -36,6 +36,7 @@ Measures the duration for which a device was in an active or "on" state
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

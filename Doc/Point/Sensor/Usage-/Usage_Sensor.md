@@ -12,6 +12,7 @@ Measures the amount of some substance that is consumed or used, over some period
 ## Child interfaces
 * [Energy_Usage_Sensor](Energy-.md)
 * [Natural_Gas_Usage_Sensor](Natural_Gas-.md)
+* [Oil_Usage_Sensor](Oil-.md)
 * [Steam_Usage_Sensor](Steam-.md)
 * [Water_Usage_Sensor](Water-/Water_Usage_Sensor.md)
 
@@ -42,6 +43,7 @@ Measures the amount of some substance that is consumed or used, over some period
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

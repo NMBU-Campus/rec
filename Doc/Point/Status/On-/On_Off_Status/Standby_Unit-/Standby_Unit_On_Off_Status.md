@@ -32,6 +32,7 @@ Indicates the on/off status of a standby unit
 ## Target Of
 ### General
 * [Point](../../../../Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds

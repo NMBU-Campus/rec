@@ -34,6 +34,7 @@ Cooling or heating element made of pipe or tube that may or may not be finned an
 ## Target Of
 ### General
 * [Point](../../../../../Point/Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Equipment.md).feeds

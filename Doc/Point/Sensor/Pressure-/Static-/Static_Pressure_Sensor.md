@@ -42,6 +42,7 @@ Measures resistance to airflow in a heating and cooling system's components and 
 ## Target Of
 ### General
 * [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds

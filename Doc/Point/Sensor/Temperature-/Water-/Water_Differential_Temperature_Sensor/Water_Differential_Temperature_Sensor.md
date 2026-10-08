@@ -38,6 +38,7 @@ Measures the difference in water temperature between an upstream and downstream 
 ## Target Of
 ### General
 * [Point](../../../../Point.md).isPointOf
+* [Root](../../../../../Root/Root.md).containsTwin
 * [Agent](../../../../../Agent/Agent.md).owns
 * [Space](../../../../../Space/Space.md).isLocationOf
 * [Equipment](../../../../../Asset/Equipment/Equipment.md).feeds

@@ -53,6 +53,8 @@ A Sensor is an input point that represents the value of a device or instrument d
 * [Usage_Sensor](Usage-/Usage_Sensor.md)
 * [Voltage_Sensor](Voltage-/Voltage_Sensor.md)
 * [Water_Level_Sensor](Water_Level-/Water_Level_Sensor.md)
+* [Wifi_Associated_Device_Count_Sensor](Wifi_Associated_Device_Count-.md)
+* [Wifi_Probing_Count_Sensor](Wifi_Probing_Count-.md)
 
 ---
 
@@ -73,6 +75,7 @@ A Sensor is an input point that represents the value of a device or instrument d
 ## Target Of
 ### General
 * [Point](../Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../../Agent/Agent.md).owns
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds

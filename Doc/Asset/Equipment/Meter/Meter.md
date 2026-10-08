@@ -11,8 +11,12 @@ A device that measure usage or consumption of some media --- typically a form en
 
 ## Child interfaces
 * [Building_Meter](Building-/Building_Meter.md)
+* [District_Heating_Meter](District_Heating-.md)
 * [Electrical_Meter](Electrical-/Electrical_Meter.md)
+* [Energy_Meter](Energy-.md)
 * [Gas_Meter](Gas-/Gas_Meter.md)
+* [Local_Cooling_Meter](Local_Cooling-.md)
+* [Solar_Energy_Meter](Solar_Energy-.md)
 * [Thermal_Power_Meter](Thermal_Power-.md)
 * [Water_Meter](Water-/Water_Meter.md)
 
@@ -45,6 +49,7 @@ A device that measure usage or consumption of some media --- typically a form en
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds

@@ -29,6 +29,7 @@ A premises is an administrative grouping of spaces that are used for some commer
 ## Target Of
 ### General
 * [Point](../Point/Point.md).isPointOf
+* [Root](../Root/Root.md).containsTwin
 * [Agent](../Agent/Agent.md).owns
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds

@@ -14,6 +14,14 @@ Sets speed
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[VelocityObservation](../../../Event/Point-/ObservationEvent/VelocityObservation.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,13 +33,13 @@ Sets speed
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Setpoint](../Setpoint.md):** lastKnownValue
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

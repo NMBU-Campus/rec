@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:DoubleValueObservation;1"
+    }
+  ],
   "description": {
     "en": "Sets some property of CO2"
   },

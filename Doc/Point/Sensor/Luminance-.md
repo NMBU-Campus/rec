@@ -37,6 +37,7 @@ Measures the luminous intensity per unit area of light travelling in a given dir
 ## Target Of
 ### General
 * [Point](../Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../../Agent/Agent.md).owns
 * [Space](../../Space/Space.md).isLocationOf
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds

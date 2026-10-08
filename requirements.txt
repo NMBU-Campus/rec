@@ -1,0 +1,9 @@
+# requirements.txt for REC/Brick DTDL → Pydantic generator
+pydantic>=2.6
+pydantic-core>=2.16
+python-slugify>=8.0.4
+ruamel.yaml>=0.18.6
+
+# (valgfritt) Azure SDK hvis dere skal opp mot ADT samtidig
+azure-digitaltwins-core>=1.2.0
+azure-identity>=1.17.1
