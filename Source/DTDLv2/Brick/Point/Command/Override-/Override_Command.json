@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Override_Command;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:ActuationEvent;1"
+    }
+  ],
   "description": {
     "en": "Controls or reports whether or not a device or control loop is in 'override'"
   },

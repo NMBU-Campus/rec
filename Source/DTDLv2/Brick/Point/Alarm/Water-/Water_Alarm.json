@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Water_Alarm;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:ExceptionEvent;1"
+    }
+  ],
   "description": {
     "en": "Alarm that indicates an undesirable event with a pipe, container, or equipment carrying water e.g. water leak"
   },

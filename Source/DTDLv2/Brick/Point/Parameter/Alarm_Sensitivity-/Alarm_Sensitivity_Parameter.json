@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Alarm_Sensitivity_Parameter;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:DoubleValueParameter;1"
+    }
+  ],
   "description": {
     "en": "A parameter indicates the sensitivity to activate an alarm."
   },

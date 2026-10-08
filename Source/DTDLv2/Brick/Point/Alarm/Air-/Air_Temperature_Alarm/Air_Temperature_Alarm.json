@@ -7,10 +7,7 @@
   "displayName": {
     "en": "Air Temperature Alarm"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Temperature_Alarm;1",
-    "dtmi:org:brickschema:schema:Brick:Air_Alarm;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Temperature_Alarm;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

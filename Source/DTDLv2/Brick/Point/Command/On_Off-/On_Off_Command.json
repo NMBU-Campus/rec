@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:On_Off_Command;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:ActuationEvent;1"
+    }
+  ],
   "description": {
     "en": "An On/Off Command controls or reports the binary status of a control loop, relay or equipment activity"
   },

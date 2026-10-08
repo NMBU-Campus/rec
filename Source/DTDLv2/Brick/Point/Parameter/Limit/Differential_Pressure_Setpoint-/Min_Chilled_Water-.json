@@ -30,10 +30,7 @@
   "displayName": {
     "en": "Min Chilled Water Differential Pressure Setpoint Limit"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Min_Limit;1",
-    "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Setpoint_Limit;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Setpoint_Limit;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

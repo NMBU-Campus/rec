@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Delay_Parameter;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:TimeSpanParameter;1"
+    }
+  ],
   "description": {
     "en": "A parameter determining how long to delay a subsequent action to take place after a received signal"
   },

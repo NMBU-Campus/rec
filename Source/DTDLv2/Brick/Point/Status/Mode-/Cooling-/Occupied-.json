@@ -27,10 +27,7 @@
   "displayName": {
     "en": "Occupied Cooling Mode Status"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1",
-    "dtmi:org:brickschema:schema:Brick:Cooling_Mode_Status;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

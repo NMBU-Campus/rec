@@ -30,10 +30,7 @@
   "displayName": {
     "en": "Max Discharge Air Temperature Setpoint Limit"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Max_Temperature_Setpoint_Limit;1",
-    "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint_Limit;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint_Limit;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

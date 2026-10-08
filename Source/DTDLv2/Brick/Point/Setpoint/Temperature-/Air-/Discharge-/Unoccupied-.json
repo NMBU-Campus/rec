@@ -27,10 +27,7 @@
   "displayName": {
     "en": "Unoccupied Discharge Air Temperature Setpoint"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Unoccupied_Air_Temperature_Setpoint;1",
-    "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

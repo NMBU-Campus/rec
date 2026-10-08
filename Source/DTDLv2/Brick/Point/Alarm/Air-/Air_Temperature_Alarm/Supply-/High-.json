@@ -27,10 +27,7 @@
   "displayName": {
     "en": "High Supply Air Temperature Alarm"
   },
-  "extends": [
-    "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Alarm;1",
-    "dtmi:org:brickschema:schema:Brick:High_Temperature_Alarm;1"
-  ],
+  "extends": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Alarm;1",
   "@context": [
     "dtmi:dtdl:context;2"
   ]

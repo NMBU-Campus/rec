@@ -1,6 +1,16 @@
 {
   "@id": "dtmi:org:brickschema:schema:Brick:Failure_Alarm;1",
   "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Component",
+      "displayName": {
+        "en": "last known value"
+      },
+      "name": "lastKnownValue",
+      "schema": "dtmi:org:w3id:rec:ExceptionEvent;1"
+    }
+  ],
   "description": {
     "en": "Alarms that indicate the failure of devices, equipment, systems and control loops"
   },
