@@ -1,6 +1,7 @@
 Endpoint;DTMI
 points;"dtmi:org:brickschema:schema:Brick:Point;1"
 alarms;"dtmi:org:brickschema:schema:Brick:Alarm;1"
+equipment;"dtmi:org:brickschema:schema:Brick:Equipment;1"
 commands;"dtmi:org:brickschema:schema:Brick:Command;1"
 parameters;"dtmi:org:brickschema:schema:Brick:Parameter;1"
 sensors;"dtmi:org:brickschema:schema:Brick:Sensor;1"
