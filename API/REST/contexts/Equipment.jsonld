@@ -1,9 +1,5 @@
 {
   "@context": {
-    "isVirtualMeter": "dtmi:org:brickschema:schema:Brick:Meter:_contents:__isVirtualMeter;1",
-    "hasSubMeter": "dtmi:org:brickschema:schema:Brick:Meter:_contents:__hasSubMeter;1",
-    "isSubMeterOf": "dtmi:org:brickschema:schema:Brick:Meter:_contents:__isSubMeterOf;1",
-    "meters": "dtmi:org:brickschema:schema:Brick:Meter:_contents:__meters;1",
     "operationalStageCount": "dtmi:org:brickschema:schema:Brick:Equipment:_contents:__operationalStageCount;1",
     "feeds": "dtmi:org:brickschema:schema:Brick:Equipment:_contents:__feeds;1",
     "isFedBy": "dtmi:org:brickschema:schema:Brick:Equipment:_contents:__isFedBy;1",
