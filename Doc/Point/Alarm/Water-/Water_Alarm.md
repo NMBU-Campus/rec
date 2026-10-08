@@ -14,14 +14,14 @@ Alarm that indicates an undesirable event with a pipe, container, or equipment c
 * [No_Water_Alarm](No-.md)
 * [Water_Level_Alarm](Water_Level_Alarm/Water_Level_Alarm.md)
 * [Water_Loss_Alarm](Water_Loss_Alarm.md)
-* [Water_Temperature_Alarm](Water_Temperature_Alarm/Water_Temperature_Alarm.md)
 
 ---
 
 ## Components
 
-### Inherited Components
-* **[Alarm](../Alarm.md):** lastKnownValue
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[ExceptionEvent](../../../Event/Point-/ExceptionEvent.md)|
 
 ---
 
@@ -62,4 +62,7 @@ Alarm that indicates an undesirable event with a pipe, container, or equipment c
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

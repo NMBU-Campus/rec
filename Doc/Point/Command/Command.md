@@ -13,7 +13,7 @@ A Command is an output point that directly determines the behavior of equipment 
 * [Boiler_Command](Boiler-.md)
 * [Bypass_Command](Bypass-.md)
 * [Cooling_Command](Cooling-.md)
-* [Damper_Command](Damper-/Damper_Command.md)
+* [Damper_Command](Damper-.md)
 * [Direction_Command](Direction-.md)
 * [Disable_Command](Disable-/Disable_Command.md)
 * [Enable_Command](Enable-/Enable_Command.md)
@@ -36,15 +36,7 @@ A Command is an output point that directly determines the behavior of equipment 
 * [Reset_Command](Reset-/Reset_Command.md)
 * [Speed_Command](Speed-.md)
 * [Tint_Command](Tint-.md)
-* [Valve_Command](Valve-/Valve_Command.md)
-
----
-
-## Components
-
-|Name|Display name|Description|Schema|
-|-|-|-|-|
-|lastKnownValue|**en**: last known value||[ActuationEvent](../../Event/Point-/ActuationEvent.md)|
+* [Valve_Command](Valve-.md)
 
 ---
 
@@ -85,4 +77,7 @@ A Command is an output point that directly determines the behavior of equipment 
 * [Asset](../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

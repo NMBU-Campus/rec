@@ -15,6 +15,14 @@ A parameter that places a lower or upper bound on the range of permitted values 
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueParameter](../../../../Event/Point-/ParameterEvent/DoubleValueParameter.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -25,7 +33,6 @@ A parameter that places a lower or upper bound on the range of permitted values 
 ## Properties
 
 ### Inherited Properties
-* **[Parameter](../../Parameter.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
@@ -53,4 +60,7 @@ A parameter that places a lower or upper bound on the range of permitted values 
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

@@ -9,6 +9,13 @@ Indicates the on/off status of a standby glycool unit
 
 ---
 
+## Components
+
+### Inherited Components
+* **[On_Status](../../On_Status.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -23,7 +30,6 @@ Indicates the on/off status of a standby glycool unit
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Point](../../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Status](../../../Status.md):** lastKnownValue
 
 ---
 
@@ -50,4 +56,7 @@ Indicates the on/off status of a standby glycool unit
 * [Asset](../../../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

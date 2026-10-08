@@ -16,8 +16,9 @@ An alarm that indicates the off-normal conditions associated with smoke.
 
 ## Components
 
-### Inherited Components
-* **[Alarm](../Alarm.md):** lastKnownValue
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[ExceptionEvent](../../../Event/Point-/ExceptionEvent.md)|
 
 ---
 
@@ -58,4 +59,7 @@ An alarm that indicates the off-normal conditions associated with smoke.
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

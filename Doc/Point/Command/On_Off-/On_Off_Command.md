@@ -20,8 +20,9 @@ An On/Off Command controls or reports the binary status of a control loop, relay
 
 ## Components
 
-### Inherited Components
-* **[Command](../Command.md):** lastKnownValue
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[ActuationEvent](../../../Event/Point-/ActuationEvent.md)|
 
 ---
 
@@ -62,4 +63,7 @@ An On/Off Command controls or reports the binary status of a control loop, relay
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

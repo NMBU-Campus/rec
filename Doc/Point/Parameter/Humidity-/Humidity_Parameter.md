@@ -16,6 +16,14 @@ Parameters relevant to humidity-related systems and points
 
 ---
 
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[RelativeHumidityParameter](../../../Event/Point-/ParameterEvent/RelativeHumidityParameter.md)|
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -26,7 +34,6 @@ Parameters relevant to humidity-related systems and points
 ## Properties
 
 ### Inherited Properties
-* **[Parameter](../Parameter.md):** lastKnownValue
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
@@ -54,4 +61,7 @@ Parameters relevant to humidity-related systems and points
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

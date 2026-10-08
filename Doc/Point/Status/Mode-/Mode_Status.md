@@ -14,9 +14,17 @@ Indicates which mode a system, device or control loop is currently in
 * [Heating_Mode_Status](Heating-/Heating_Mode_Status.md)
 * [Occupied_Mode_Status](Occupied-/Occupied_Mode_Status.md)
 * [Operating_Mode_Status](Operating-/Operating_Mode_Status.md)
-* [Speed_Mode_Status](../Speed-/Speed_Mode_Status.md)
+* [Speed_Mode_Status](Speed-.md)
 * [Unoccupied_Mode_Status](Unoccupied-/Unoccupied_Mode_Status.md)
 * [Zone_Air_Conditioning_Mode_Status](Zone_Air_Conditioning-.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[StringValueStatus](../../../Event/Point-/StatusEvent/StringValueStatus.md)|
 
 ---
 
@@ -31,7 +39,6 @@ Indicates which mode a system, device or control loop is currently in
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Status](../Status.md):** lastKnownValue
 
 ---
 
@@ -58,4 +65,7 @@ Indicates which mode a system, device or control loop is currently in
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

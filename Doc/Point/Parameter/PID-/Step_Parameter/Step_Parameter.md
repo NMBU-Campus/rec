@@ -9,7 +9,14 @@
 ## Child interfaces
 * [Differential_Pressure_Step_Parameter](Differential_Pressure-/Differential_Pressure_Step_Parameter.md)
 * [Static_Pressure_Step_Parameter](Static_Pressure-/Static_Pressure_Step_Parameter.md)
-* [Temperature_Step_Parameter](Temperature-/Temperature_Step_Parameter.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueParameter](../../../../Event/Point-/ParameterEvent/DoubleValueParameter.md)|
 
 ---
 
@@ -23,7 +30,6 @@
 ## Properties
 
 ### Inherited Properties
-* **[Parameter](../../Parameter.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
@@ -51,4 +57,7 @@
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

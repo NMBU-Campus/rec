@@ -13,6 +13,9 @@ An event emanating from or targeting a Point; e.g., an individual Observation fr
 * [ActuationEvent](ActuationEvent.md)
 * [ExceptionEvent](ExceptionEvent.md)
 * [ObservationEvent](ObservationEvent/ObservationEvent.md)
+* [ParameterEvent](ParameterEvent/ParameterEvent.md)
+* [SetpointEvent](SetpointEvent/SetpointEvent.md)
+* [StatusEvent](StatusEvent/StatusEvent.md)
 
 ---
 

@@ -8,16 +8,14 @@
 
 ## Child interfaces
 * [Air_Flow_Alarm](Air_Flow_Alarm/Air_Flow_Alarm.md)
-* [Air_Temperature_Alarm](../Temperature-/Air-/Air_Temperature_Alarm.md)
-* [Discharge_Air_Smoke_Detection_Alarm](../Smoke-/Smoke_Detection_Alarm/Discharge_Air-.md)
-* [Supply_Air_Smoke_Detection_Alarm](../Smoke-/Smoke_Detection_Alarm/Supply_Air-.md)
 
 ---
 
 ## Components
 
-### Inherited Components
-* **[Alarm](../Alarm.md):** lastKnownValue
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[ExceptionEvent](../../../Event/Point-/ExceptionEvent.md)|
 
 ---
 
@@ -58,4 +56,7 @@
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

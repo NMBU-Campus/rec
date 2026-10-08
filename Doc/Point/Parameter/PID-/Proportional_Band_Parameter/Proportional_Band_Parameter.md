@@ -8,12 +8,16 @@
 
 ## Child interfaces
 * [Differential_Pressure_Proportional_Band](Differential_Pressure_Proportional_Band/Differential_Pressure_Proportional_Band.md)
-* [Discharge_Air_Temperature_Proportional_Band_Parameter](Discharge_Air_Temperature-/Discharge_Air_Temperature_Proportional_Band_Parameter.md)
-* [Entering_Water_Temperature_Proportional_Band_Parameter](Entering_Water_Temperature-.md)
 * [Exhaust_Air_Flow_Proportional_Band_Parameter](Exhaust_Air_Flow-/Exhaust_Air_Flow_Proportional_Band_Parameter.md)
-* [Leaving_Water_Temperature_Proportional_Band_Parameter](Leaving_Water_Temperature-.md)
 * [Static_Pressure_Proportional_Band_Parameter](Static_Pressure-/Static_Pressure_Proportional_Band_Parameter.md)
-* [Supply_Air_Temperature_Proportional_Band_Parameter](Supply_Air_Temperature-/Supply_Air_Temperature_Proportional_Band_Parameter.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueParameter](../../../../Event/Point-/ParameterEvent/DoubleValueParameter.md)|
 
 ---
 
@@ -27,7 +31,6 @@
 ## Properties
 
 ### Inherited Properties
-* **[Parameter](../../Parameter.md):** lastKnownValue
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
 
 ---
@@ -55,4 +58,7 @@
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

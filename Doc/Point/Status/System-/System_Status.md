@@ -11,9 +11,15 @@ Indicates properties of the activity of a system
 
 ## Child interfaces
 * [Emergency_Air_Flow_System_Status](Emergency_Air_Flow-.md)
-* [Emergency_Power_Off_System_Status](Emergency_Power_Off-/Emergency_Power_Off_System_Status.md)
-* [Heat_Exchanger_System_Enable_Status](Heat_Exchanger_System_Enable_Status.md)
 * [System_Shutdown_Status](System_Shutdown_Status.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[StringValueStatus](../../../Event/Point-/StatusEvent/StringValueStatus.md)|
 
 ---
 
@@ -28,7 +34,6 @@ Indicates properties of the activity of a system
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Status](../Status.md):** lastKnownValue
 
 ---
 
@@ -55,4 +60,7 @@ Indicates properties of the activity of a system
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

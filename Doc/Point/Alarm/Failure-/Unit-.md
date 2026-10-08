@@ -12,7 +12,7 @@ An alarm that indicates the failure of an equipment or device
 ## Components
 
 ### Inherited Components
-* **[Alarm](../Alarm.md):** lastKnownValue
+* **[Failure_Alarm](Failure_Alarm.md):** lastKnownValue
 
 ---
 
@@ -56,4 +56,7 @@ An alarm that indicates the failure of an equipment or device
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

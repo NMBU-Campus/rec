@@ -20,6 +20,13 @@ Indicates the on/off status of a control loop, relay or equipment
 
 ---
 
+## Components
+
+### Inherited Components
+* **[On_Status](../On_Status.md):** lastKnownValue
+
+---
+
 ## Relationships
 
 ### Inherited Relationships
@@ -31,7 +38,6 @@ Indicates the on/off status of a control loop, relay or equipment
 
 ### Inherited Properties
 * **[Point](../../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Status](../../Status.md):** lastKnownValue
 
 ---
 
@@ -58,4 +64,7 @@ Indicates the on/off status of a control loop, relay or equipment
 * [Asset](../../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

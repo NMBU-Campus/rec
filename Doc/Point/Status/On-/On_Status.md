@@ -11,7 +11,14 @@ Indicates if a control loop, relay or equipment is on
 
 ## Child interfaces
 * [On_Off_Status](On_Off_Status/On_Off_Status.md)
-* [Overridden_On_Status](../Overridden-/Overridden_On_Status.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[BooleanValueStatus](../../../Event/Point-/StatusEvent/BooleanValueStatus.md)|
 
 ---
 
@@ -26,7 +33,6 @@ Indicates if a control loop, relay or equipment is on
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Status](../Status.md):** lastKnownValue
 
 ---
 
@@ -53,4 +59,7 @@ Indicates if a control loop, relay or equipment is on
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

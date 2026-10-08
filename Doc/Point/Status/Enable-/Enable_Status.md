@@ -10,7 +10,15 @@ Indicates if a system or piece of functionality has been enabled
 ---
 
 ## Child interfaces
-* [Heat_Exchanger_System_Enable_Status](../System-/Heat_Exchanger_System_Enable_Status.md)
+* [Heat_Exchanger_System_Enable_Status](Heat_Exchanger_System-.md)
+
+---
+
+## Components
+
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[BooleanValueStatus](../../../Event/Point-/StatusEvent/BooleanValueStatus.md)|
 
 ---
 
@@ -25,7 +33,6 @@ Indicates if a system or piece of functionality has been enabled
 
 ### Inherited Properties
 * **[Point](../../Point.md):** aggregate, customProperties, customTags, hasQuantity, hasSubstance, identifiers, name
-* **[Status](../Status.md):** lastKnownValue
 
 ---
 
@@ -52,4 +59,7 @@ Indicates if a system or piece of functionality has been enabled
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

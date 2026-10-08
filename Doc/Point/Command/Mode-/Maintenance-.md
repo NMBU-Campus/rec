@@ -12,7 +12,7 @@ Controls whether or not a device or controller is operating in "Maintenance" mod
 ## Components
 
 ### Inherited Components
-* **[Command](../Command.md):** lastKnownValue
+* **[Mode_Command](Mode_Command.md):** lastKnownValue
 
 ---
 
@@ -56,4 +56,7 @@ Controls whether or not a device or controller is operating in "Maintenance" mod
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint

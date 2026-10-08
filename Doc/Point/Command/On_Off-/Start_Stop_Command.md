@@ -12,7 +12,7 @@ A Start/Stop Command controls or reports the active/inactive status of a control
 ## Components
 
 ### Inherited Components
-* **[Command](../Command.md):** lastKnownValue
+* **[On_Off_Command](On_Off_Command.md):** lastKnownValue
 
 ---
 
@@ -56,4 +56,7 @@ A Start/Stop Command controls or reports the active/inactive status of a control
 * [Asset](../../../Asset/Asset.md).hasPoint
 * [ExceptionEvent](../../../Event/Point-/ExceptionEvent.md).sourcePoint
 * [ObservationEvent](../../../Event/Point-/ObservationEvent/ObservationEvent.md).sourcePoint
+* [ParameterEvent](../../../Event/Point-/ParameterEvent/ParameterEvent.md).sourcePoint
 * [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).producedBy
+* [SetpointEvent](../../../Event/Point-/SetpointEvent/SetpointEvent.md).sourcePoint
+* [StatusEvent](../../../Event/Point-/StatusEvent/StatusEvent.md).sourcePoint
