@@ -29,6 +29,7 @@ The legal/administrative representation of some lands and/or buildings. I.e., "F
 ## Target Of
 ### General
 * [Point](../Point/Point.md).isPointOf
+* [Root](../Root/Root.md).containsTwin
 * [Agent](../Agent/Agent.md).owns
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds

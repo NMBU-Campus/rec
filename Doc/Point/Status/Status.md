@@ -39,6 +39,7 @@ A Status is input point that reports the current operating mode, state, position
 * [Speed_Status](Speed-.md)
 * [Stages_Status](Stages-.md)
 * [Switch_Status](Switch-.md)
+* [System_Shutdown_Status](System-/System_Shutdown_Status.md)
 * [System_Status](System-/System_Status.md)
 * [Thermostat_Status](Thermostat-.md)
 * [Tint_Status](Tint-.md)
@@ -62,19 +63,20 @@ A Status is input point that reports the current operating mode, state, position
 
 ## Target Of
 ### General
-* [Portfolio](../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../Point.md).isPointOf
+* [Root](../../Root/Root.md).containsTwin
 * [Agent](../../Agent/Agent.md).owns
 * [Space](../../Space/Space.md).isLocationOf
-* [Lease](../../Event/Lease.md).leaseOf
-* [Point](../Point.md).isPointOf
-* [Document](../../Information/Document/Document.md).documentTopic
-* [Document](../../Information/Document/Document.md).url
-* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../Collection/System/System.md).includes
 * [Equipment](../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../Collection/System/System.md).includes
+* [Architecture](../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../Information/Document/Document.md).documentTopic
+* [Document](../../Information/Document/Document.md).url
+* [Lease](../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../Collection/Portfolio.md).includes
+* [ServiceObject](../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../Event/Point-/ActuationEvent.md).targetPoint

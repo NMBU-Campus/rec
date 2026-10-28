@@ -13,6 +13,7 @@ A temporally indexed entity, e.g., an observation, a lease, a construction proje
 * [ElevatorTrip](ElevatorTrip.md)
 * [Lease](Lease.md)
 * [PointEvent](Point-/PointEvent.md)
+* [Warranty](Warranty.md)
 
 ---
 
@@ -33,6 +34,7 @@ A temporally indexed entity, e.g., an observation, a lease, a construction proje
 ## Target Of
 ### General
 * [Point](../Point/Point.md).isPointOf
+* [Root](../Root/Root.md).containsTwin
 * [Agent](../Agent/Agent.md).owns
 * [Space](../Space/Space.md).isLocationOf
 * [Equipment](../Asset/Equipment/Equipment.md).feeds

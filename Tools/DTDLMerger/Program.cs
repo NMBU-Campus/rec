@@ -23,7 +23,7 @@ foreach (FileInfo file in inputFiles)
 }
 
 // Parse the files
-ModelParser modelParser = new ModelParser(new ParsingOptions { AllowUndefinedExtensions = true });
+ModelParser modelParser = new ModelParser(new ParsingOptions { AllowUndefinedExtensions = WhenToAllow.Always });
 IReadOnlyDictionary<Dtmi, DTEntityInfo> ontology = await modelParser.ParseAsync(modelJson.ToAsyncEnumerable());
 
 // Set up JSON stream and write wrapper array

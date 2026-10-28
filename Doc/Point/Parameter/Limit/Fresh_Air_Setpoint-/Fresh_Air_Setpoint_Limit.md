@@ -10,15 +10,16 @@ A parameter that places a lower or upper bound on the range of permitted values 
 ---
 
 ## Child interfaces
-* [Max_Fresh_Air_Setpoint_Limit](Max-.md)
-* [Min_Fresh_Air_Setpoint_Limit](Min-.md)
+* [Max_Fresh_Air_Setpoint_Limit](../Max-/Max_Fresh_Air_Setpoint_Limit.md)
+* [Min_Fresh_Air_Setpoint_Limit](../Min-/Min_Fresh_Air_Setpoint_Limit.md)
 
 ---
 
 ## Components
 
-### Inherited Components
-* **[Limit](../Limit.md):** lastKnownValue
+|Name|Display name|Description|Schema|
+|-|-|-|-|
+|lastKnownValue|**en**: last known value||[DoubleValueParameter](../../../../Event/Point-/ParameterEvent/DoubleValueParameter.md)|
 
 ---
 
@@ -38,19 +39,20 @@ A parameter that places a lower or upper bound on the range of permitted values 
 
 ## Target Of
 ### General
-* [Portfolio](../../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../../Point.md).isPointOf
+* [Root](../../../../Root/Root.md).containsTwin
 * [Agent](../../../../Agent/Agent.md).owns
 * [Space](../../../../Space/Space.md).isLocationOf
-* [Lease](../../../../Event/Lease.md).leaseOf
-* [Point](../../../Point.md).isPointOf
-* [Document](../../../../Information/Document/Document.md).documentTopic
-* [Document](../../../../Information/Document/Document.md).url
-* [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../../../Collection/System/System.md).includes
 * [Equipment](../../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../../Collection/System/System.md).includes
+* [Architecture](../../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../../Information/Document/Document.md).documentTopic
+* [Document](../../../../Information/Document/Document.md).url
+* [Lease](../../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../../../Event/Point-/ActuationEvent.md).targetPoint

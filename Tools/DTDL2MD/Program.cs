@@ -354,8 +354,8 @@ namespace DTDL2MD
             List<DTInterfaceInfo> parentDirectories = GetLongestParentPath(iface);
             List<string> storagePathComponents = parentDirectories.Select(parent => GetApiName(parent)).ToList();
 
-            // If the interface has children, place it with them
-            if (ontology.ChildrenOf(iface).Any()) {
+            // If the interface has children, or is a root interface (no parents), place it in its own folder
+            if (ontology.ChildrenOf(iface).Any() || !iface.Extends.Any()) {
                 storagePathComponents.Add(GetApiName(iface));
             }
 

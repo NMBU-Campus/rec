@@ -15,9 +15,7 @@ A device that measure usage or consumption of some media --- typically a form en
 * [Electrical_Meter](Electrical-/Electrical_Meter.md)
 * [Energy_Meter](Energy-.md)
 * [Gas_Meter](Gas-/Gas_Meter.md)
-* [Heat_Meter](Heat-.md)
-* [Local_Heating_Meter](Local_Heating-.md)
-* [Oil_Meter](Oil-.md)
+* [Local_Cooling_Meter](Local_Cooling-.md)
 * [Solar_Energy_Meter](Solar_Energy-.md)
 * [Thermal_Power_Meter](Thermal_Power-.md)
 * [Water_Meter](Water-/Water_Meter.md)
@@ -33,7 +31,7 @@ A device that measure usage or consumption of some media --- typically a form en
 |meters|**en**: meters||0-Infinity|||True|
 ### Inherited Relationships
 * **[Equipment](../Equipment.md):** feeds, isFedBy
-* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy, warranty
 
 ---
 
@@ -44,13 +42,14 @@ A device that measure usage or consumption of some media --- typically a form en
 |isVirtualMeter|**en**: is virtual meter||boolean|True|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
-* **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../Asset.md):** assetTag, colour, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds

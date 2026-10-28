@@ -34,6 +34,7 @@ The equipment, distribution systems and terminals that provide, either collectiv
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

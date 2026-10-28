@@ -10,8 +10,8 @@ Indicates which mode a system, device or control loop is currently in
 ---
 
 ## Child interfaces
-* [Cooling_Mode_Status](Cooling-.md)
-* [Heating_Mode_Status](Heating-.md)
+* [Cooling_Mode_Status](Cooling-/Cooling_Mode_Status.md)
+* [Heating_Mode_Status](Heating-/Heating_Mode_Status.md)
 * [Occupied_Mode_Status](Occupied-/Occupied_Mode_Status.md)
 * [Operating_Mode_Status](Operating-/Operating_Mode_Status.md)
 * [Speed_Mode_Status](Speed-.md)
@@ -44,19 +44,20 @@ Indicates which mode a system, device or control loop is currently in
 
 ## Target Of
 ### General
-* [Portfolio](../../../Collection/Portfolio.md).includes
-* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Point](../../Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
-* [Lease](../../../Event/Lease.md).leaseOf
-* [Point](../../Point.md).isPointOf
-* [Document](../../../Information/Document/Document.md).documentTopic
-* [Document](../../../Information/Document/Document.md).url
-* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
-* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
-* [System](../../../Collection/System/System.md).includes
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
 * [Equipment](../../../Asset/Equipment/Equipment.md).isFedBy
+* [System](../../../Collection/System/System.md).includes
+* [Architecture](../../../Space/Architecture/Architecture.md).isFedBy
+* [Document](../../../Information/Document/Document.md).documentTopic
+* [Document](../../../Information/Document/Document.md).url
+* [Lease](../../../Event/Lease.md).leaseOf
+* [PointOfInterest](../../../Information/PointOfInterest.md).objectOfInterest
+* [Portfolio](../../../Collection/Portfolio.md).includes
+* [ServiceObject](../../../Information/ServiceObject/ServiceObject.md).relatedTo
 * [Meter](../../../Asset/Equipment/Meter/Meter.md).meters
 ### Inherited
 * [ActuationEvent](../../../Event/Point-/ActuationEvent.md).targetPoint

@@ -34,6 +34,7 @@ Occupancy Zone is a spatial area where devices are monitoring or reporting on th
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds

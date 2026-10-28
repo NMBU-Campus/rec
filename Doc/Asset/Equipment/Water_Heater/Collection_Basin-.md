@@ -13,7 +13,7 @@ Basin heaters prevent cold water basin freeze-up, e.g. in cooling towers, closed
 
 ### Inherited Relationships
 * **[Equipment](../Equipment.md):** feeds, isFedBy
-* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy, warranty
 
 ---
 
@@ -24,13 +24,14 @@ Basin heaters prevent cold water basin freeze-up, e.g. in cooling towers, closed
 |tags|**en**: Tags|**en**: Brick tags associated with this interface.|map (string->boolean)|False|
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
-* **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../Asset.md):** assetTag, colour, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds

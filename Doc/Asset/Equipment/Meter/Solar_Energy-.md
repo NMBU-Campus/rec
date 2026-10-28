@@ -14,7 +14,7 @@ A meter that measures the usage or consumption of solar energy
 ### Inherited Relationships
 * **[Equipment](../Equipment.md):** feeds, isFedBy
 * **[Meter](Meter.md):** hasSubMeter, isSubMeterOf, meters
-* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy
+* **[Asset](../../Asset.md):** commissionedBy, documentation, geometry, hasPart, hasPoint, installedBy, isPartOf, locatedIn, manufacturedBy, mountedOn, servicedBy, warranty
 
 ---
 
@@ -23,13 +23,14 @@ A meter that measures the usage or consumption of solar energy
 ### Inherited Properties
 * **[Equipment](../Equipment.md):** operationalStageCount
 * **[Meter](Meter.md):** isVirtualMeter
-* **[Asset](../../Asset.md):** assetTag, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
+* **[Asset](../../Asset.md):** assetTag, colour, commissioningDate, customProperties, customTags, identifiers, initialCost, installationDate, IPAddress, MACAddress, maintenanceInterval, modelNumber, name, serialNumber, turnoverDate, weight
 
 ---
 
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../../Space/Space.md).isLocationOf
 * [Equipment](../Equipment.md).feeds

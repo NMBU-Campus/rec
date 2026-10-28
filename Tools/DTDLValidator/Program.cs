@@ -123,7 +123,7 @@
             
             Console.WriteLine($"Validated JSON for all files - now validating DTDL");
             List<string> modelList = modelDict.Values.ToList<string>();
-            ModelParser modelParser = new ModelParser(new ParsingOptions { AllowUndefinedExtensions = true, DtmiResolver = new DtmiResolver(Resolver) });
+            ModelParser modelParser = new ModelParser(new ParsingOptions { AllowUndefinedExtensions = WhenToAllow.Always, DtmiResolver = new DtmiResolver(Resolver) });
 
             try
             {

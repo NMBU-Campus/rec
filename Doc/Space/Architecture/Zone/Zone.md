@@ -44,6 +44,7 @@ A sub-zone within or outside of a building defined to support some technology an
 ## Target Of
 ### General
 * [Point](../../../Point/Point.md).isPointOf
+* [Root](../../../Root/Root.md).containsTwin
 * [Agent](../../../Agent/Agent.md).owns
 * [Space](../../Space.md).isLocationOf
 * [Equipment](../../../Asset/Equipment/Equipment.md).feeds
